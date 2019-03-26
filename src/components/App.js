@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./Home";
 import User from "./User";
+import Upload from "./Upload";
+import Search from "./Search";
 import Activity from "./Activity";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Icon} from "semantic-ui-react";
@@ -15,6 +17,8 @@ class App extends React.Component {
       <Route path="/" exact component={Home} />
        <Route path="/activity/" component={Activity} />
        <Route path="/user/" component={User} />
+       <Route path="/upload/" component={Upload} />
+       <Route path="/search/" component={Search} />
       </Router>
       </div>
     );

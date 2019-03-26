@@ -1,14 +1,14 @@
 import React from "react";
 
 
-class User extends React.Component {
+class Search extends React.Component {
   render(){
     return (
       <div className="">
-      <h1> User </h1>
+      <h1> Search </h1>
       <p>App still in progress</p>
       </div>
     );
   }
 }
-export default User;
+export default Search;
