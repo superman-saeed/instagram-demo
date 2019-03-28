@@ -8,7 +8,7 @@ class User extends React.Component {
     return (
       <div className="">
       <div className="user top">
-        <h3>superman-saeed</h3>
+        <h3>User</h3>
         <a href="#archive"><Icon name="bars" size="large" /></a>
         <a href="#menu"><Icon name="history" size="large" /></a>
       </div>
