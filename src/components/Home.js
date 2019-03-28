@@ -7,9 +7,9 @@ class Home extends React.Component {
     return (
       <div>
       <div className="toolbar top">
-      <a href="#pic"><Icon name="camera" size="large"  size="large"/></a>
+      <a href="#pic"><Icon name="camera" size="large" /></a>
       <h3>Instagram</h3>
-      <a href="#send"><Icon name="send" size="large"  size="large"/></a>
+      <a href="#send"><Icon name="send" size="large"/></a>
       <a href="#tv"><Icon name="tv"  size="large"/></a>
       </div>
       <div className="feed">

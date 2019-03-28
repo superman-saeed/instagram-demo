@@ -29,11 +29,11 @@ class Nav extends React.Component{
     return (
       <div className="nav-container">
       <div className="main-nav">
-      <div> <Link to="/"><Icon name="home" size="large"  size="large"/></Link></div>
-      <div> <Link to="/search"><Icon name="search" size="large"  size="large"/></Link></div>
-      <div> <Link to="/upload"><Icon name="plus square" size="large"  size="large"/></Link></div>
-      <div><Link to="/activity"><Icon name="like" size="large"  size="large"/></Link></div>
-      <div><Link to="/user"><Icon name="user" size="large"  size="large"/></Link></div>
+      <div> <Link to="/"><Icon name="home"  size="large"/></Link></div>
+      <div> <Link to="/search"><Icon name="search"  size="large"/></Link></div>
+      <div> <Link to="/upload"><Icon name="plus square"   size="large"/></Link></div>
+      <div><Link to="/activity"><Icon name="like"  size="large"/></Link></div>
+      <div><Link to="/user"><Icon name="user"  size="large"/></Link></div>
       </div>
       </div>
     );
