@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-.toolbar{
-  border-bottom: 0.5px solid #ccc;
-  box-sizing: border-box;
-  padding: 10px;
-}
+
 .toolbar h3{
   display: inline;
   font-family: 'Pacifico', cursive;
@@ -13,12 +9,7 @@
 .toolbar a:first-child{
    float: left;
 }
-.toolbar a{
-   float: right;
-   margin: 1px 10px;
-   outline: none;
-   color: black;
-}
+
 .tooolbar::after{
   clear: both;
   display: table;
