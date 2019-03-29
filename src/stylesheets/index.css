@@ -8,7 +8,7 @@
 .top{
   border-bottom: 0.5px solid #ccc;
   box-sizing: border-box;
-  padding: 8px;
+  padding:12px 8px 10px;
 }
 
 .top a{

@@ -9,6 +9,9 @@
 .toolbar a:first-child{
    float: left;
 }
+.toolbar{
+  padding: 7px;
+}
 
 .tooolbar::after{
   clear: both;
