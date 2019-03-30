@@ -1,7 +1,6 @@
 import React from "react";
 import {Icon} from "semantic-ui-react";
 import "../stylesheets/user.css";
-import { Button } from 'semantic-ui-react';
 import pic from "../img/pic.jpg";
 
 
@@ -17,6 +16,7 @@ class User extends React.Component {
         <a href="#archive"><Icon name="bars" size="large" /></a>
         <a href="#menu"><Icon name="history" size="large" /></a>
       </div>
+
       <div className="user-details">
        <div className="user-pic"><img src={pic} alt="imag" /></div>
        <div className="user-profile">
@@ -26,8 +26,27 @@ class User extends React.Component {
        </div>
        <div className="edit"><button>Edit Profile</button></div>
       </div>
+      <div className="name-details">
+      <p>Name</p>
       <p>App still in progress</p>
+      <p>url</p>
       </div>
+      <div className="highlights bborder">
+      story highlight
+      </div>
+      <div className="photo-line bborder">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div>
+      <div>1</div>
+      <div>2</div>
+      <div>App is still in progress</div>
+       </div>
+      </div>
+
+
     );
   }
 }
