@@ -31,13 +31,11 @@ class User extends React.Component {
       <p>App still in progress</p>
       <p>url</p>
       </div>
-      <div className="highlights bborder">
-      story highlight
-      </div>
+
       <div className="photo-line bborder">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div><a href="#c"><Icon name="picture outline" size="large"/></a></div>
+        <div><a href="#b"><Icon name="bookmark outline" size="large"/></a></div>
+        <div><a href="#c"><Icon name="user outline" size="large"/></a></div>
       </div>
       <div>
       <div>1</div>
