@@ -26,7 +26,7 @@
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
  padding: 15px 16px;
- grid-row-gap: 5px;
+
 
 }
 .user-details h2{
@@ -58,8 +58,7 @@
 
 }
 .edit{
-  padding: 10px 10px 25px;
-
+  
 }
 .edit button{
   grid-column-start: 1;

@@ -1,6 +1,7 @@
 import React from "react";
-import {Icon} from "semantic-ui-react";
 import "../stylesheets/user.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pic from "../img/pic.jpg";
 
 
@@ -13,8 +14,8 @@ class User extends React.Component {
         <h3>User</h3>
         <div></div>
         </div>
-        <a href="#archive"><Icon name="bars" size="large" /></a>
-        <a href="#menu"><Icon name="history" size="large" /></a>
+        <a href="#archive"><FontAwesomeIcon icon="bars" size="lg" /></a>
+        <a href="#menu"><FontAwesomeIcon icon="history" size="lg" /></a>
       </div>
 
       <div className="user-details">
@@ -33,9 +34,9 @@ class User extends React.Component {
       </div>
 
       <div className="photo-line bborder">
-        <div><a href="#c"><Icon name="picture outline" size="large"/></a></div>
-        <div><a href="#b"><Icon name="bookmark outline" size="large"/></a></div>
-        <div><a href="#c"><Icon name="user outline" size="large"/></a></div>
+        <div><a href="#c"><FontAwesomeIcon icon="image" size="lg" /></a></div>
+        <div><a href="#b"><FontAwesomeIcon icon="tag" size="lg" /></a></div>
+        <div><a href="#c"><FontAwesomeIcon icon="user" size="lg" /></a></div>
       </div>
       <div>
       <div>1</div>

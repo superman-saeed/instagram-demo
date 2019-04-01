@@ -5,7 +5,7 @@ import Upload from "./Upload";
 import Search from "./Search";
 import Activity from "./Activity";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Icon} from "semantic-ui-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../stylesheets/app.css";
 
 class App extends React.Component {
@@ -29,11 +29,11 @@ class Nav extends React.Component{
     return (
       <div className="nav-container">
       <div className="main-nav">
-      <div> <Link to="/"><Icon name="home"  size="large"/></Link></div>
-      <div> <Link to="/search"><Icon name="search"  size="large"/></Link></div>
-      <div> <Link to="/upload"><Icon name="plus square"   size="large"/></Link></div>
-      <div><Link to="/activity"><Icon name="like"  size="large"/></Link></div>
-      <div><Link to="/user"><Icon name="user"  size="large"/></Link></div>
+      <div> <Link to="/"><FontAwesomeIcon icon="home" size="lg" /></Link></div>
+      <div> <Link to="/search"><FontAwesomeIcon icon="search" size="lg" /></Link></div>
+      <div> <Link to="/upload"><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
+      <div><Link to="/activity"><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
+      <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
       </div>
       </div>
     );
