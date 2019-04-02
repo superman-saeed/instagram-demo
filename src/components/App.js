@@ -11,14 +11,14 @@ import "../stylesheets/app.css";
 class App extends React.Component {
   render(){
     return (
-      <div>
+      <div className="app">
       <Router>
-      <Nav />
       <Route path="/" exact component={Home} />
        <Route path="/activity/" component={Activity} />
        <Route path="/user/" component={User} />
        <Route path="/upload/" component={Upload} />
        <Route path="/search/" component={Search} />
+       <Nav />
       </Router>
       </div>
     );

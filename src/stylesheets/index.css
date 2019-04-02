@@ -1,9 +1,17 @@
 body{
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.94rem;
   font-family: sans-serif,arial;
+  line-height: 1;
+}
+body a{
+  text-decoration: none;
+  outline: none;
 }
 
+.app{
+  
+}
 .right{
   float: right;
 }

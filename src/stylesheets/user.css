@@ -1,3 +1,8 @@
+.user{
+  overflow: hidden;
+  box-sizing:border-box;
+
+}
 .user a{
   float: right;
 }
@@ -58,7 +63,7 @@
 
 }
 .edit{
-  
+
 }
 .edit button{
   grid-column-start: 1;
@@ -101,4 +106,15 @@
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
   padding: 10px;
+}
+
+.gallery{
+  padding-top: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  grid-gap: 3px;
+}
+.gallery div{
+  background-color: grey;
 }

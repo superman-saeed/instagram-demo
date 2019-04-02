@@ -1,9 +1,10 @@
 .nav-container{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   border-top: 0.5px solid #ccc;
+  background-color: white;
 }
 .main-nav{
  display: grid;
