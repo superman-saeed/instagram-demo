@@ -1,5 +1,5 @@
 import React from "react";
-import {Icon} from "semantic-ui-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../stylesheets/home.css";
 
 class Home extends React.Component {
@@ -7,10 +7,10 @@ class Home extends React.Component {
     return (
       <div>
       <div className="toolbar top">
-      <a href="#pic"><Icon name="camera" size="large" /></a>
-      <h3>Instagram</h3>
-      <a href="#send"><Icon name="send" size="large"/></a>
-      <a href="#tv"><Icon name="tv"  size="large"/></a>
+      <a href="#pic"><FontAwesomeIcon icon="camera" size="lg" /></a>
+      <h4>Instagram</h4>
+      <a href="#send"><FontAwesomeIcon icon="paper-plane" size="lg" /></a>
+      <a href="#tv"><FontAwesomeIcon icon="tv" size="lg" /></a>
       </div>
       <div className="feed">
       <h2>Feeds</h2>

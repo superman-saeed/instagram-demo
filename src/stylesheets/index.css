@@ -1,19 +1,31 @@
-.right{
-  float: right;
+body{
+  margin: 0;
+  font-size: 0.94rem;
+  font-family: sans-serif,arial;
 }
-.right::after{
-  clear: both;
-  display: table;
+body a{
+  text-decoration: none;
+  outline: none;
+  color: black;
 }
+
+.app{
+  position: relative;
+}
+
 .top{
   border-bottom: 0.5px solid #ccc;
   box-sizing: border-box;
-  padding: 8px;
+  padding:12px 8px 10px;
 }
 
 .top a{
    float: right;
    margin: 1px 5px;
-   outline: none;
-   color: black;
+
+}
+.top a::after{
+  content: "";
+  clear: both;
+  display: table;
 }
