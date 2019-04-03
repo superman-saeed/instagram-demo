@@ -1,16 +1,3 @@
-.user{
-  overflow: hidden;
-  box-sizing:border-box;
-
-}
-.user a{
-  float: right;
-}
-.user::after{
-  clear: both;
-  display: table;
-  content: "";
-}
 .select-user, .select-user div,h3{
   display: inline;
 }
@@ -38,25 +25,20 @@
   margin-bottom: 0;
 }
 .user-pic{
-  grid-row-start: 1;
-  grid-row-end: 3;
-  justify-content: center;
+  grid-row: 1/3;
+
 
 }
 .user-pic img{
   height: 90px;
   width: 90px;
-  margin: auto;
   border-radius: 50%;
-  grid-row-start: 1;
-  grid-row-end: 3;
   border: 2px solid black;
 
 }
 
 .user-profile, .edit{
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column: 2/4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
@@ -66,8 +48,7 @@
 
 }
 .edit button{
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column: 1/4;
   font-weight: bold;
   padding: 6px 10px;
   text-align: center;
@@ -90,18 +71,13 @@
 .name-details p:nth-last-child(1){
   margin-bottom: 5px;
 }
-.highlights{
-  border-top: 1px solid #ccc;
 
-}
 .photo-line{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
 }
-.photo-line a{
-  color: black;
-}
+
 .bborder{
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
@@ -109,12 +85,25 @@
 }
 
 .gallery{
-  padding-top: 3px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 100px;
-  grid-gap: 3px;
+  display: flex;
+  flex-flow: row wrap;
 }
-.gallery div{
-  background-color: grey;
+
+.photo-frame{
+  position: relative;
+  flex-basis: 33.333%;
+  border: 1px solid;
+  box-sizing: border-box;
+
+}
+.photo-frame::before{
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
+.gallery-photo{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
 }

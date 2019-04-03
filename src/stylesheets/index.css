@@ -2,23 +2,17 @@ body{
   margin: 0;
   font-size: 0.94rem;
   font-family: sans-serif,arial;
-  line-height: 1;
 }
 body a{
   text-decoration: none;
   outline: none;
+  color: black;
 }
 
 .app{
-  
+  position: relative;
 }
-.right{
-  float: right;
-}
-.right::after{
-  clear: both;
-  display: table;
-}
+
 .top{
   border-bottom: 0.5px solid #ccc;
   box-sizing: border-box;
@@ -28,6 +22,10 @@ body a{
 .top a{
    float: right;
    margin: 1px 5px;
-   outline: none;
-   color: black;
+
+}
+.top a::after{
+  content: "";
+  clear: both;
+  display: table;
 }

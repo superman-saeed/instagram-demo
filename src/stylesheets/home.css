@@ -12,8 +12,3 @@
 .toolbar{
   padding: 7px;
 }
-
-.tooolbar::after{
-  clear: both;
-  display: table;
-}
