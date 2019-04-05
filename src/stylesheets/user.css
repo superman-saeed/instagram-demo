@@ -88,20 +88,18 @@
 .gallery{
   display: flex;
   flex-flow: row wrap;
+  margin: -0.5px;
 }
 
 .photo-frame{
   position: relative;
-  flex-basis: calc(33.333% - 3px);
+  flex-basis: calc(33.333% - 1px);
   box-sizing: border-box;
-  margin-bottom: 2px;
+  margin: 0.5px;
   background-color: grey;
 
 }
-.photo-frame:nth-child(even){
-  margin-right: 2px;
-  margin-left: 2px;
-}
+
 .photo-frame::before{
   content: '';
   padding-top: 100%;
