@@ -28,11 +28,23 @@ function Photos({link}){
         <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
       </div>
       <Route exact  path={link} component={Gallery} />
-      <Route path={`${link}/gallery`} component={Gallery} />
-      <Route  path={`${link}/tag`} component={Login} />
+      <Route path={`${link}/:id`} component={SwitchTabs} />
     </Router>
 
   )
+}
+
+function SwitchTabs({match}){
+  const route = match.params.id;
+  switch(route) {
+    case "gallery":
+      return <Gallery />;
+    case "tag":
+      return <Login />;
+    default:
+      return <Gallery />;
+
+  }
 }
 
 function UserDetails(props){

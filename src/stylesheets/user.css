@@ -64,9 +64,10 @@
 .name-details{
    padding: 10px;
 
+
 }
 .name-details p{
-  margin-bottom: 0;
+  margin: 2px;
 }
 .name-details p:nth-last-child(1){
   margin-bottom: 5px;
@@ -91,10 +92,15 @@
 
 .photo-frame{
   position: relative;
-  flex-basis: 33.333%;
-  border: 1px solid;
+  flex-basis: calc(33.333% - 3px);
   box-sizing: border-box;
+  margin-bottom: 2px;
+  background-color: grey;
 
+}
+.photo-frame:nth-child(even){
+  margin-right: 2px;
+  margin-left: 2px;
 }
 .photo-frame::before{
   content: '';
