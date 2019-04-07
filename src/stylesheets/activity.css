@@ -23,14 +23,17 @@
   display: block;
   padding: 8px 15px;
   line-height: 2;
-  
+
 }
 .activity-nav a:hover{
-  border-bottom: 2px solid black;
+  background-color: white;
 }
 .activity-nav a::after{
   clear: both;
   display: table;
   content: "";
 
+}
+.tab{
+  border-bottom: 1.2px solid black;
 }

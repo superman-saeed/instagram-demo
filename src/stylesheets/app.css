@@ -15,7 +15,7 @@
 }
 .main-nav{
  display: grid;
- grid-template-columns: auto auto auto auto auto;
+ grid-template-columns: repeat(5,1fr);
 
 }
 .main-nav div{
