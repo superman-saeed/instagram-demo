@@ -37,7 +37,6 @@ class Activity extends React.Component {
    }
   }
   render(){
-    const {url} = this.props.match;
     return (
       <div className="activity">
        <div className="activity-nav">
@@ -53,7 +52,7 @@ class Activity extends React.Component {
        </ul>
        </div>
        <div>
-        {(this.state.hash=="following") ? <Following /> : <You />}
+        {(this.state.hash==="following") ? <Following /> : <You />}
       </div>
       </div>
     );

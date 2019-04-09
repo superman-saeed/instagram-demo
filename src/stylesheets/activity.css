@@ -26,7 +26,7 @@
 
 }
 .activity-nav a:hover{
-  background-color: white;
+  
 }
 .activity-nav a::after{
   clear: both;
