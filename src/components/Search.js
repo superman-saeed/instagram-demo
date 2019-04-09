@@ -36,10 +36,10 @@ function PhotoGrid(props){
 function ThreeGrid(props){
   return(
     <div className="small-g">
-      <div class="sg-inner">
-        <div class="fthree-glid">{props.num}</div>
-        <div class="fthree-glid">{props.num}</div>
-        <div class="fthree-glid">{props.num}</div>
+      <div className="sg-inner">
+        <div className="fthree-glid"><div>{props.num}</div></div>
+        <div className="fthree-glid"><div>{props.num}</div></div>
+        <div className="fthree-glid"><div>{props.num}</div></div>
       </div>
     </div>
   );
@@ -49,7 +49,7 @@ function MiddleGrid(props){
   return(
     <div className="big-g">
     <div className="sg-inner">
-      <div className="fone-grid">3</div>
+      <div className="fone-grid"><div>3</div></div>
     </div>
     </div>
   );
@@ -58,8 +58,8 @@ function LeftGrid(props){
   return(
     <div className="left-g">
     <div className="inner">
-      <div className="ftwo-glid">2</div>
-      <div className="ftwo-glid">2</div>
+      <div className="ftwo-glid"><div>2</div></div>
+      <div className="ftwo-glid"><div>2</div></div>
     </div>
     </div>
   );
