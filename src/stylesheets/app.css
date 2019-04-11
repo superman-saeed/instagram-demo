@@ -1,9 +1,10 @@
 .app{
-  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 40.06px);
+  overflow-x: hidden;
 }
-.nav-frame{
-  margin-bottom: 40.06px;
-}
+
 .nav-container{
   position: fixed;
   bottom: 0;

@@ -21,7 +21,6 @@ class Search extends React.Component {
 export default Search;
 
 function PhotoGrid(props){
-  const {p,num} = props;
   return(
     <div className="photo-grid">
      <div className="g-photo"><div className="g-one"> 1</div></div>

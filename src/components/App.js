@@ -27,7 +27,6 @@ class App extends React.Component {
 class Nav extends React.Component{
   render(){
     return (
-      <div className="nav-frame">
       <div className="nav-container">
       <div className="main-nav">
       <div> <Link to="/"><FontAwesomeIcon icon="home" size="lg" /></Link></div>
@@ -35,7 +34,6 @@ class Nav extends React.Component{
       <div> <Link to="/upload"><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
       <div><Link to="/activity"><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
       <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
-      </div>
       </div>
       </div>
     );
