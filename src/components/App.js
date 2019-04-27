@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../stylesheets/app.css";
 
+// app with routing layout
 class App extends React.Component {
   render(){
     return (
@@ -24,6 +25,7 @@ class App extends React.Component {
     );
   }
 }
+// App nav
 class Nav extends React.Component{
   render(){
     return (

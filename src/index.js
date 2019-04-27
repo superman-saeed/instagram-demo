@@ -16,7 +16,9 @@ import
   faImage,
   faTag,
   faHistory,
-  faBars
+  faBars,
+  faBookmark,
+  faComment,
  }
 from '@fortawesome/free-solid-svg-icons';
 
@@ -33,7 +35,9 @@ library.add(
   faImage,
   faTag,
   faHistory,
-  faBars
+  faBars,
+  faBookmark,
+  faComment
 );
 
 

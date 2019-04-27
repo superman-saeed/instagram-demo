@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Engagement');
+
 body{
   margin: 0;
-  font-size: 0.94rem;
+  font-size: 1.05rem;
   font-family: sans-serif,arial;
 }
 body a{
@@ -9,19 +11,32 @@ body a{
   color: black;
 }
 
-.top{
+
+.top-bar h2{
+  display: inline;
+  font-family: 'Engagement', cursive;
+  margin-left:5px;
+  padding: 0;
+  margin-bottom: 0;
+  line-height: 0;
+}
+
+
+
+.top-bar{
   border-bottom: 0.5px solid #ccc;
   box-sizing: border-box;
   padding:12px 8px 10px;
 }
+.top-bar a:first-child{
 
-.top a{
+}
+.top-bar a:nth-last-child(1), .top-bar a:nth-last-child(2){
    float: right;
    margin: 1px 5px;
 
 }
-.top a::after{
-  content: "";
+.top-bar a::after{
   clear: both;
   display: table;
 }

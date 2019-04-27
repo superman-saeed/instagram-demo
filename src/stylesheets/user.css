@@ -4,6 +4,7 @@
 .user h3{
   position: relative;
   box-sizing: border-box;
+  line-height: 0;
 }
 .user h3::after{
   content: " ";
@@ -37,6 +38,13 @@
 
 }
 
+.user-profile{
+  margin-bottom: 7px;
+
+}
+.user-profile span{
+  font-size: 13px;
+}
 .user-profile, .edit{
   grid-column: 2/4;
   display: grid;

@@ -26,6 +26,13 @@
 }
 .main-nav a{
   color: black;
-  outline: none;
 
+}
+.feed-action a:last-child{
+  float: right;
+}
+.feed-image{
+  width: 100%;
+  height: 300px;
+  background-color: #233;
 }

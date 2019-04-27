@@ -50,7 +50,7 @@ function SwitchTabs({match}){
 function UserDetails(props){
   return(
     <div>
-    <div className="user top">
+    <div className="user top-bar">
       <div className="select-user">
       <h3>User</h3>
       <div></div>
@@ -60,11 +60,11 @@ function UserDetails(props){
     </div>
 
     <div className="user-details">
-     <div className="user-pic"><img src={pic} alt="imag" /></div>
+     <div className="user-pic"><img src={pic} alt="profile pic" /></div>
      <div className="user-profile">
-      <div><h2>1</h2><p>posts</p></div>
-      <div><h2>2</h2><p>following</p></div>
-      <div><h2>3</h2><p>followers</p></div>
+      <div><h2>1</h2><span>posts</span></div>
+      <div><h2>2</h2><span>followers</span></div>
+      <div><h2>3</h2><span>following</span></div>
      </div>
      <div className="edit"><button>Edit Profile</button></div>
     </div>
