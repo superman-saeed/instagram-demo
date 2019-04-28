@@ -28,8 +28,18 @@
   color: black;
 
 }
-.feed-action a:last-child{
-  float: right;
+.feed-option{
+  margin-bottom: 5px;
+}
+.feed-action, .feed-option{
+  padding: 5px 10px 5px 0;
+}
+.feed a{
+  margin-left: 15px;
+}
+.feed a::after{
+  clear:both;
+  display: table;
 }
 .feed-image{
   width: 100%;

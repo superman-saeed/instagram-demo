@@ -23,7 +23,7 @@ function Photos({link}){
   return(
     <Router>
       <div className="photo-line bborder">
-        <div><Link to={`${link}/gallery`}><FontAwesomeIcon icon="image" size="lg" /></Link></div>
+        <div><Link to={`${link}/gallery`}><FontAwesomeIcon icon="image" size="small" /></Link></div>
         <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="tag" size="lg" /></Link></div>
         <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
       </div>

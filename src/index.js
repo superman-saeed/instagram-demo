@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './stylesheets/index.css';
+
 import
 {
   faHeart,
@@ -19,6 +20,8 @@ import
   faBars,
   faBookmark,
   faComment,
+  faLocationArrow,
+  faEllipsisV
  }
 from '@fortawesome/free-solid-svg-icons';
 
@@ -37,7 +40,9 @@ library.add(
   faHistory,
   faBars,
   faBookmark,
-  faComment
+  faComment,
+  faLocationArrow,
+  faEllipsisV
 );
 
 

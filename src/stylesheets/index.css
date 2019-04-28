@@ -15,7 +15,6 @@ body a{
 .top-bar h2{
   display: inline;
   font-family: 'Engagement', cursive;
-  margin-left:5px;
   padding: 0;
   margin-bottom: 0;
   line-height: 0;
@@ -28,12 +27,12 @@ body a{
   box-sizing: border-box;
   padding:12px 8px 10px;
 }
-.top-bar a:first-child{
-
+.top-bar a{
+ margin: 1px 8px;
 }
 .top-bar a:nth-last-child(1), .top-bar a:nth-last-child(2){
    float: right;
-   margin: 1px 5px;
+
 
 }
 .top-bar a::after{
