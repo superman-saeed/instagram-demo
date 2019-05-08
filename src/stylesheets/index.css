@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Engagement');
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
 
 body{
   margin: 0;
@@ -14,10 +14,12 @@ body a{
 
 .top-bar h2{
   display: inline;
-  font-family: 'Engagement', cursive;
+  font-family: 'Petit Formal Script', cursive;
   padding: 0;
   margin-bottom: 0;
   line-height: 0;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 
@@ -26,13 +28,13 @@ body a{
   border-bottom: 0.5px solid #ccc;
   box-sizing: border-box;
   padding:12px 8px 10px;
+  text-align: center;
 }
 .top-bar a{
  margin: 1px 8px;
 }
 .top-bar a:nth-last-child(1), .top-bar a:nth-last-child(2){
    float: right;
-
 
 }
 .top-bar a::after{

@@ -12,16 +12,18 @@ import
   faPlusSquare,
   faUser,
   faCamera,
-  faPaperPlane,
-  faTv,
   faImage,
   faTag,
   faHistory,
   faBars,
   faBookmark,
   faComment,
-  faLocationArrow,
-  faEllipsisV
+  faCogs,
+  faEllipsisV,
+  faUserPlus,
+  faTh,
+  faMap,
+  faIdCardAlt
  }
 from '@fortawesome/free-solid-svg-icons';
 
@@ -33,16 +35,18 @@ library.add(
   faPlusSquare,
   faUser,
   faCamera,
-  faPaperPlane,
-  faTv,
   faImage,
   faTag,
   faHistory,
   faBars,
   faBookmark,
   faComment,
-  faLocationArrow,
-  faEllipsisV
+  faCogs,
+  faEllipsisV,
+  faUserPlus,
+  faTh,
+  faMap,
+  faIdCardAlt
 );
 
 

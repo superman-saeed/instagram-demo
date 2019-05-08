@@ -12,7 +12,7 @@ function Feed(props){
 
      <div className="feed-action">
       <a href="#like"><FontAwesomeIcon icon="heart" size="lg" /></a>
-
+      <a href="#like"><FontAwesomeIcon icon="comment" flip="horizontal" size="lg" /></a>
       <a href="#bookmark"><FontAwesomeIcon icon="bookmark" size="lg" pull="right" /></a>
      </div>
      <div className="comments"></div>
@@ -25,10 +25,9 @@ class Home extends React.Component {
     return (
       <div>
       <div className="top-bar">
-      <a href="#pic"><FontAwesomeIcon icon="camera" size="lg" /></a>
+      <a href="#pic"><FontAwesomeIcon pull="left" icon="camera" size="lg" /></a>
       <h2>Instagram</h2>
-      <a class="right" href="#send"><FontAwesomeIcon icon="location-arrow" size="lg" /></a>
-      <a class="right" href="#tv"><FontAwesomeIcon icon="tv" size="lg" /></a>
+      <a href="#addUser"><FontAwesomeIcon icon="user-plus" size="lg" /></a>
       </div>
       <div className="feed">
       <span>App is still in progress</span> </div>

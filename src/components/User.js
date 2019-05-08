@@ -23,9 +23,10 @@ function Photos({link}){
   return(
     <Router>
       <div className="photo-line bborder">
-        <div><Link to={`${link}/gallery`}><FontAwesomeIcon icon="image" size="small" /></Link></div>
-        <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="tag" size="lg" /></Link></div>
-        <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
+        <div><Link to={`${link}/gallery`}><FontAwesomeIcon icon="th" size="lg" /></Link></div>
+        <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="map" size="lg" /></Link></div>
+        <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="bookmark" size="lg" /></Link></div>
+        <div><Link to="/user"><FontAwesomeIcon icon="id-card-alt" size="lg" /></Link></div>
       </div>
       <Route exact  path={link} component={Gallery} />
       <Route path={`${link}/:id`} component={SwitchTabs} />
@@ -51,12 +52,9 @@ function UserDetails(props){
   return(
     <div>
     <div className="user top-bar">
-      <div className="select-user">
+      <a href="#addUser"><FontAwesomeIcon pull="left" icon="cogs" size="lg" /></a>
       <h3>User</h3>
-      <div></div>
-      </div>
-      <a href="#archive"><FontAwesomeIcon icon="bars" size="lg" /></a>
-      <a href="#menu"><FontAwesomeIcon icon="history" size="lg" /></a>
+      <a href="#addUser"><FontAwesomeIcon icon="user-plus" size="lg" /></a>
     </div>
 
     <div className="user-details">

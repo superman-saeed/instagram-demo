@@ -1,7 +1,7 @@
 .app{
   position: absolute;
   width: 100%;
-  height: calc(100% - 40.06px);
+  height: calc(100% - 42.4px);
   overflow-x: hidden;
 }
 
@@ -9,7 +9,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   border-top: 0.5px solid #ccc;
   z-index: 1;
   background-color: #fff;
@@ -25,7 +25,7 @@
 
 }
 .main-nav a{
-  color: black;
+  color: #000;
 
 }
 .feed-option{
