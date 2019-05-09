@@ -23,7 +23,8 @@ import
   faUserPlus,
   faTh,
   faMap,
-  faIdCardAlt
+  faIdCardAlt,
+  faPlusCircle
  }
 from '@fortawesome/free-solid-svg-icons';
 
@@ -46,7 +47,8 @@ library.add(
   faUserPlus,
   faTh,
   faMap,
-  faIdCardAlt
+  faIdCardAlt,
+  faPlusCircle
 );
 
 

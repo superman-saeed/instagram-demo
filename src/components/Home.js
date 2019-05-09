@@ -29,6 +29,11 @@ class Home extends React.Component {
       <h2>Instagram</h2>
       <a href="#addUser"><FontAwesomeIcon icon="user-plus" size="lg" /></a>
       </div>
+      <div className="stories">
+      <span className="my-story">
+      <FontAwesomeIcon icon="plus-circle" size="small" />
+      </span>
+      </div>
       <div className="feed">
       <span>App is still in progress</span> </div>
       <Feed />
