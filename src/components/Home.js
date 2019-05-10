@@ -1,14 +1,20 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../stylesheets/app.css";
+/*
+ component for stories and posts
 
+*/
 function Feed(props){
   return(
     <div className="feed">
      <div className="feed-option">
-     <a href="#option"><span>us_er</span><FontAwesomeIcon icon="ellipsis-v" size="lg" pull="right"/></a>
+     <span></span> <span>us_er</span>
+     <a href="#option"><FontAwesomeIcon icon="ellipsis-v"  pull="right"/></a>
      </div>
-     <div className="feed-image">tg</div>
+     <div className="feed-image">
+     App is still in progress
+     </div>
 
      <div className="feed-action">
       <a href="#like"><FontAwesomeIcon icon="heart" size="lg" /></a>
@@ -34,8 +40,7 @@ class Home extends React.Component {
       <FontAwesomeIcon icon="plus-circle" size="small" />
       </span>
       </div>
-      <div className="feed">
-      <span>App is still in progress</span> </div>
+
       <Feed />
       </div>
     );

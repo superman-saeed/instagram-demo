@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
 
 body{
   margin: 0;
@@ -14,12 +14,12 @@ body a{
 
 .top-bar h2{
   display: inline;
-  font-family: 'Petit Formal Script', cursive;
+  font-family: 'Grand Hotel', cursive;
   padding: 0;
   margin-bottom: 0;
   line-height: 0;
-  font-weight: bolder;
-  font-size: 18px;
+  font-weight: lighter;
+
 }
 
 
@@ -31,7 +31,7 @@ body a{
   text-align: center;
 }
 .top-bar a{
- margin: 1px 8px;
+ margin: 1px 3px 1px 3px;
 }
 .top-bar a:nth-last-child(1), .top-bar a:nth-last-child(2){
    float: right;
@@ -40,4 +40,23 @@ body a{
 .top-bar a::after{
   clear: both;
   display: table;
+}
+
+.my-story{
+  width: 75px;
+  height: 75px;
+  background-color: #ccc;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+.my-story svg{
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  color: #0081ff;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }

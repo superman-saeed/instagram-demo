@@ -8,7 +8,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../stylesheets/app.css";
 
-// app with routing layout
+/*
+  Main navigation component and routing
+*/
 class App extends React.Component {
   render(){
     return (

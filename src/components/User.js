@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Gallery from "./Gallery";
 import Login from "./Login";
-import pic from "../img/pic.jpg";
 import "../stylesheets/user.css";
-
+/*
+ user component => photo grid,p single photo colectiond, photo tags, bookmarks
+*/
 
 class User extends React.Component {
   render(){
@@ -58,7 +59,10 @@ function UserDetails(props){
     </div>
 
     <div className="user-details">
-     <div className="user-pic"><img src={pic} alt="profile pic" /></div>
+     <div className="user-pic">
+     <span className="my-story">
+     <FontAwesomeIcon icon="plus-circle" size="small" />
+     </span></div>
      <div className="user-profile">
       <div><h2>1</h2><span>posts</span></div>
       <div><h2>2</h2><span>followers</span></div>
