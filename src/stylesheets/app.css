@@ -40,10 +40,16 @@
   display: inline-block;
 }
 .feed-action, .feed-option{
-  padding: 4px 10px 5px 0;
+  padding: 4px 5px 5px 5px;
 }
+#post-owner a{
+  margin-left: 4px;
+  vertical-align: super;
+  font-weight:bold;
+
+ }
 .feed a{
-  margin-left: 15px;
+  margin: 7px;
 }
 .feed a:last-child::after{
   clear:both;

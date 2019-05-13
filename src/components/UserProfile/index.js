@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Gallery from "./Gallery";
 import Login from "./Login";
-import "../stylesheets/user.css";
+import "../../stylesheets/user.css";
 /*
  user component => photo grid,p single photo colectiond, photo tags, bookmarks
 */

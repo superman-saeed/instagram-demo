@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "../stylesheets/app.css";
+import "../../stylesheets/app.css";
 /*
  component for stories and posts
 
@@ -9,7 +9,7 @@ function Feed(props){
   return(
     <div className="feed">
      <div className="feed-option">
-     <span></span> <span>us_er</span>
+     <span></span><span id="post-owner"><a href="/user" >us_er</a></span>
      <a href="#option"><FontAwesomeIcon icon="ellipsis-v"  pull="right"/></a>
      </div>
      <div className="feed-image">
@@ -33,7 +33,7 @@ class Home extends React.Component {
       <div className="top-bar">
       <a href="#pic"><FontAwesomeIcon pull="left" icon="camera" size="lg" /></a>
       <h2>Instagram</h2>
-      <a href="#addUser"><FontAwesomeIcon icon="user-plus" size="lg" /></a>
+      <a href="#addUser"><FontAwesomeIcon icon="user-plus" flip="horizontal" size="lg" /></a>
       </div>
       <div className="stories">
       <span className="my-story">

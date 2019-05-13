@@ -7,7 +7,7 @@ body{
 }
 body a{
   text-decoration: none;
-  outline: none;
+  //outline: none;
   color: black;
 }
 

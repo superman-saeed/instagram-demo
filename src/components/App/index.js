@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "./Home";
-import User from "./User";
-import Upload from "./Upload";
-import Search from "./Search";
-import Activity from "./Activity";
+import Home from "../Home";
+import User from "../UserProfile";
+import Upload from "../Upload";
+import Search from "../Search";
+import Activity from "../Activity";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "../stylesheets/app.css";
+import "../../stylesheets/app.css";
 
 /*
   Main navigation component and routing
