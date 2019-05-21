@@ -6,6 +6,7 @@ import Search from "../Search";
 import Activity from "../Activity";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as Routes from "../../constants/routes";
 import "../../stylesheets/app.css";
 
 /*
@@ -16,11 +17,11 @@ class App extends React.Component {
     return (
       <div className="app">
       <Router>
-      <Route path="/" exact component={Home} />
-       <Route path="/activity/" component={Activity} />
-       <Route path="/user/" component={User} />
+      <Route path={Routes.LANDING} exact component={Home} />
+       <Route path={Routes.ACTIVITY} component={Activity} />
+       <Route path={Routes.USER} component={User} />
        <Route path="/upload/" component={Upload} />
-       <Route path="/search/" component={Search} />
+       <Route path={Routes.SEARCH} component={Search} />
        <Nav />
       </Router>
       </div>
@@ -33,11 +34,11 @@ class Nav extends React.Component{
     return (
       <div className="nav-container">
       <div className="main-nav">
-      <div> <Link to="/"><FontAwesomeIcon icon="home" size="lg" /></Link></div>
-      <div> <Link to="/search"><FontAwesomeIcon icon="search" size="lg" /></Link></div>
+      <div> <Link to={Routes.LANDING}><FontAwesomeIcon icon="home" size="lg" /></Link></div>
+      <div> <Link to={Routes.SEARCH}><FontAwesomeIcon icon="search" size="lg" /></Link></div>
       <div> <Link to="/upload"><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
-      <div><Link to="/activity"><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
-      <div><Link to="/user"><FontAwesomeIcon icon="user" size="lg" /></Link></div>
+      <div><Link to={Routes.ACTIVITY}><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
+      <div><Link to={Routes.USER}><FontAwesomeIcon icon="user" size="lg" /></Link></div>
       </div>
       </div>
     );
