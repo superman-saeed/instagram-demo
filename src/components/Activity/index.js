@@ -1,7 +1,6 @@
 import React from "react";
 import You from "./You";
 import Following from "./Following";
-import "../../stylesheets/activity.css";
 
 // following and me tabs
 class Activity extends React.Component {

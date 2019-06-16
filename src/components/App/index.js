@@ -7,7 +7,7 @@ import Activity from "../Activity";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Routes from "../../constants/routes";
-import "../../stylesheets/app.css";
+
 
 /*
   Main navigation component and routing

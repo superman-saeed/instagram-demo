@@ -1,5 +1,4 @@
 import React from "react";
-import "../../stylesheets/search.css";
 
 const gridArr =[1,2,3,4,5,6,7]
 class Search extends React.Component {

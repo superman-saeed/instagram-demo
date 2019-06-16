@@ -1,0 +1,18 @@
+.my-story{
+  width: 75px;
+  height: 75px;
+  background-color: #ccc;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+.my-story svg{
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  color: #0081ff;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}

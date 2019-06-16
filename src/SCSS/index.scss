@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+@import "components/_topbar.scss";
+@import "components/_navbar.scss";
+@import "components/_mystory.scss";
+@import "components/_activity.scss";
+@import "components/_search.scss";
+@import "components/_user.scss";
+
+
+body{
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: sans-serif,arial;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
 .app{
   position: absolute;
   width: 100%;
@@ -5,30 +27,7 @@
   overflow-x: hidden;
 }
 
-.nav-container{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-top: 0.5px solid #ccc;
-  z-index: 1;
-  background-color: #fff;
-}
-.main-nav{
- display: grid;
- grid-template-columns: repeat(5,1fr);
 
-}
-.main-nav div{
-  padding: 10px;
-  text-align: center;
-
-}
-
-.main-nav a{
-  color: #000;
-
-}
 .feed-option{
 
 }
