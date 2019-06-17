@@ -1,29 +1,33 @@
-.top-bar h2{
-  display: inline;
-  font-family: 'Grand Hotel', cursive;
-  padding: 0;
-  margin-bottom: 0;
-  line-height: 0;
-  font-weight: lighter;
-
-}
-
-
 
 .top-bar{
-  border-bottom: 0.5px solid #ccc;
+  border-bottom: 0.5px solid $coblank;
   box-sizing: border-box;
   padding:12px 8px 10px;
   text-align: center;
-}
-.top-bar a{
- margin: 1px 3px 1px 3px;
-}
-.top-bar a:nth-last-child(1), .top-bar a:nth-last-child(2){
-   float: right;
 
-}
-.top-bar a::after{
-  clear: both;
-  display: table;
+  h2{
+    display: inline;
+    font-family: 'Grand Hotel', cursive;
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 0;
+    font-weight: lighter;
+  }
+
+  a{
+   margin: 1px 3px 1px 3px;
+   float: right;
+  }
+
+  a:first-child{
+     float: left;
+
+  }
+
+  a::after{
+    clear: both;
+    display: table;
+  }
+
+
 }

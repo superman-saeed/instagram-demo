@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+$coblank: #ccc;
+$d-pad:10px;
 
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
 @import "components/_topbar.scss";
 @import "components/_navbar.scss";
 @import "components/_mystory.scss";
 @import "components/_activity.scss";
 @import "components/_search.scss";
 @import "components/_user.scss";
+@import "components/_picfeed.scss";
+
 
 
 body{
@@ -15,7 +19,7 @@ body{
 
   a{
     text-decoration: none;
-    color: black;
+    color: #000;
   }
 }
 
@@ -25,37 +29,4 @@ body{
   width: 100%;
   height: calc(100% - 42.4px);
   overflow-x: hidden;
-}
-
-
-.feed-option{
-
-}
-.feed-option span:first-child{
-  width: 25px;
-  height: 25px;
-  background-color: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-}
-.feed-action, .feed-option{
-  padding: 4px 5px 5px 5px;
-}
-#post-owner a{
-  margin-left: 4px;
-  vertical-align: super;
-  font-weight:bold;
-
- }
-.feed a{
-  margin: 7px;
-}
-.feed a:last-child::after{
-  clear:both;
-  display: table;
-}
-.feed-image{
-  width: 100%;
-  height: 300px;
-  background-color: #ccc;
 }

@@ -3,22 +3,21 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 0.5px solid #ccc;
+  border-top: 0.5px solid $coblank;
   z-index: 1;
   background-color: #fff;
-}
-.main-nav{
- display: grid;
- grid-template-columns: repeat(5,1fr);
 
-}
-.main-nav div{
-  padding: 10px;
-  text-align: center;
+  .main-nav{
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+      div{
+        padding: $d-pad;
+        text-align: center;
 
-}
+      }
+      a{
+       color: #000;
+      }
 
-.main-nav a{
-  color: #000;
-
+  }
 }
