@@ -1,3 +1,8 @@
+.feed{
+  margin-top:$d-pad;
+  margin-bottom:$d-pad;
+
+}
 .feed-option{
 
 }
@@ -30,4 +35,7 @@
   background-color: $coblank;
   box-sizing: border-box;
 
+}
+.comments{
+  padding: $d-pad;
 }

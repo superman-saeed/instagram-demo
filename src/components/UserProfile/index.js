@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Gallery from "./Gallery";
-import Login from "./Login";
+import ProfileGrid from "../ProfileGrid";
+import Tag from "./Tag";
 /*
  user component => photo grid,p single photo colectiond, photo tags, bookmarks
 */
@@ -28,7 +28,7 @@ function Photos({link}){
         <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="bookmark" size="lg" /></Link></div>
         <div><Link to="/user"><FontAwesomeIcon icon="id-card-alt" size="lg" /></Link></div>
       </div>
-      <Route exact  path={link} component={Gallery} />
+      <Route exact  path={link} component={ProfileGrid} />
       <Route path={`${link}/:id`} component={SwitchTabs} />
     </Router>
 
@@ -39,11 +39,11 @@ function SwitchTabs({match}){
   const route = match.params.id;
   switch(route) {
     case "gallery":
-      return <Gallery />;
+      return <ProfileGrid />;
     case "tag":
-      return <Login />;
+      return <Tag />;
     default:
-      return <Gallery />;
+      return <ProfileGrid />;
 
   }
 }

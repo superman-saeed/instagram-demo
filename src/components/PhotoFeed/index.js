@@ -23,7 +23,9 @@ const Feed =(props)=>{
           <a href="#like"><FontAwesomeIcon icon="comment" flip="horizontal" size="lg" /></a>
           <a href="#bookmark"><FontAwesomeIcon icon="bookmark" size="lg" pull="right" /></a>
        </div>
-       <div className="comments"></div>
+       <div className="comments">
+        some text about pic
+       </div>
     </div>
   );
 }

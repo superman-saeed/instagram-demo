@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import React from "react";
 import Home from "../Home";
 import User from "../UserProfile";
-import Upload from "../Upload";
+import Upload from "../Upload/index.js";
 import Search from "../Search";
 import Activity from "../Activity";
 import Navigation from "../Nav";
@@ -36,7 +36,7 @@ class App extends React.Component {
 
              <Route path={Routes.USER} component={User} />
 
-             <Route path="/upload/" component={Upload} />
+             <Route path="/upload" component={Upload} />
 
              <Route path={Routes.SEARCH} component={Search} />
 

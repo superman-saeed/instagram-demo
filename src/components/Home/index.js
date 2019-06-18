@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Feed from "../photo-feed";
+import Feed from "../PhotoFeed";
 import {PhotoConsumer} from "../App/context";
 
 class Home extends React.Component {
@@ -14,11 +14,13 @@ class Home extends React.Component {
           <h2>Instagram</h2>
           <a href="#addUser"><FontAwesomeIcon icon="user-plus" flip="horizontal" size="lg" /></a>
         </div>
+
         <div className="stories">
           <span className="my-story">
           <FontAwesomeIcon icon="plus-circle" size="lg" />
           </span>
         </div>
+
        <PhotoConsumer>
        {arr => arr.map((x,y)=><Feed key={y} />)}
 
