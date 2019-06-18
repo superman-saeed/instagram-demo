@@ -13,7 +13,7 @@ class Nav extends React.Component{
 
       <div> <Link to={Routes.SEARCH}><FontAwesomeIcon icon="search" size="lg" /></Link></div>
 
-      <div> <Link to="/upload"><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
+      <div> <Link to={Routes.UPLOAD}><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
 
       <div><Link to={Routes.ACTIVITY}><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
 

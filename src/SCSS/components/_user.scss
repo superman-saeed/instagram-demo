@@ -25,7 +25,7 @@
 .user-pic img{
   height: 90px;
   width: 90px;
-  border-radius: 50%;
+  border-radius: $circle;
   border: 2px solid black;
 
 }
@@ -49,7 +49,7 @@
 }
 .edit button{
   grid-column: 1/4;
-  font-weight: bold;
+  font-weight: $bold;
   padding: 6px 10px;
   text-align: center;
   background-color: #fff;
@@ -58,7 +58,7 @@
   border-radius: 5px;
 }
 .name-details p:first-child{
-   font-weight: bold;
+   font-weight: $bold;
 
 }
 .name-details{
@@ -80,8 +80,8 @@
 }
 
 .bborder{
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid $coblank;
+  border-top: 1px solid $coblank;
   padding: 10px;
 }
 
@@ -96,7 +96,7 @@
   flex-basis: calc(33.333% - 1px);
   box-sizing: border-box;
   margin: 0.5px;
-  background-color: #ccc;
+  background-color: $coblank;
 
 }
 

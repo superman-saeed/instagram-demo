@@ -10,12 +10,11 @@ export const getRandom =(obj)=>{
       unsplash.photos.getRandomPhoto(obj);
 }
 export const getUserPhotos= (obj)=>{
-  return (unsplash.users.photos(obj);
+  return (unsplash.users.photos(obj)
   .then((data)=>data.json()));
 }
 export const listPhotos =()=>{
   return (unsplash.photos.listPhotos(3, 9, "latest")
   .then((data)=>data.json()));
 
-  });
-}
+  }

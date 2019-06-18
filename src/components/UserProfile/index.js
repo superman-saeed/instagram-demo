@@ -60,7 +60,7 @@ function UserDetails(props){
     <div className="user-details">
      <div className="user-pic">
      <span className="my-story">
-     <FontAwesomeIcon icon="plus-circle" size="small" />
+     <FontAwesomeIcon icon="plus-circle" size="sm" />
      </span></div>
      <div className="user-profile">
       <div><h2>1</h2><span>posts</span></div>

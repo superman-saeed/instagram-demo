@@ -8,6 +8,7 @@ import Activity from "../Activity";
 import Navigation from "../Nav";
 import * as Routes from "../../constants/routes";
 import {PhotoProvider} from "./context";
+import {listPhotos} from "../../lib/Unsplash";
 
 
 /*
@@ -21,7 +22,7 @@ class App extends React.Component {
     }
   }
   componentDidMount(){
-
+    listPhotos().then(data=>console.log(data))
   }
   render(){
     return (
@@ -36,7 +37,7 @@ class App extends React.Component {
 
              <Route path={Routes.USER} component={User} />
 
-             <Route path="/upload" component={Upload} />
+             <Route path={Routes.UPLOAD} component={Upload} />
 
              <Route path={Routes.SEARCH} component={Search} />
 

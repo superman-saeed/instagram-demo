@@ -2,6 +2,9 @@
   margin-top:$d-pad;
   margin-bottom:$d-pad;
 
+  a{
+    font-weight:$bold;
+  }
 }
 .feed-option{
 
@@ -10,21 +13,22 @@
   width: 25px;
   height: 25px;
   background-color: $coblank;
-  border-radius: 50%;
+  border-radius: $circle;
   display: inline-block;
 }
 .feed-action, .feed-option{
   padding: 4px 5px 5px 5px;
+
+  a{
+    margin: 7px;
+  }
 }
+
 #post-owner a{
   margin-left: 4px;
   vertical-align: super;
-  font-weight:bold;
-
  }
-.feed a{
-  margin: 7px;
-}
+
 .feed a:last-child::after{
   clear:both;
   display: table;
@@ -37,5 +41,9 @@
 
 }
 .comments{
-  padding: $d-pad;
+  padding: 2px $d-pad;
+}
+.likes{
+  font-weight: $bold;
+  padding: 2px $d-pad;
 }

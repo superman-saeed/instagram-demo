@@ -4,7 +4,7 @@
   background-color: $coblank;
   margin: 4px;
   display: inline-block;
-  border-radius: 50%;
+  border-radius: $circle;
   position: relative;
 }
 .my-story svg{
@@ -13,6 +13,6 @@
   right: 2px;
   color: #0081ff;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: $circle;
   border: 1px solid #fff;
 }
