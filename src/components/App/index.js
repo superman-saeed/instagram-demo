@@ -22,12 +22,18 @@ class App extends React.Component {
     }
   }
   componentDidMount(){
-    listPhotos().then(data=>console.log(data))
+    const {url} = this.state;
+    if(!(url.length)){
+     listPhotos().then((data)=>{
+       console.log(data)
+       this.setState({url:data})
+     }).catch((err)=> console.log(err));
+   }
   }
   render(){
     return (
       <div className="app">
-        <PhotoProvider value={[1,2,3,4]}>
+        <PhotoProvider value={this.state.url}>
             <Router>
             <Route exact
               path={Routes.LANDING}

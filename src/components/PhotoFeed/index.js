@@ -1,21 +1,29 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {getInfo} from "../../lib/data.js"
 /*
  component for stories and posts
 
 */
 
 const Feed =(props)=>{
-  const {img} = props;
+  const {json} = props;
+  const {
+    insta,
+    likes,
+    desc,
+    url
+  }=getInfo(json);
+
   return(
     <div className="feed">
        <div className="feed-option">
-           <span></span><span className="u-link" id="post-owner"><Link to="/user" >us_er</Link></span>
+           <span></span><span className="u-link" id="post-owner"><Link to="/user" >{insta}</Link></span>
            <a href="#option"><FontAwesomeIcon icon="ellipsis-v"  pull="right"/></a>
        </div>
        <div className="feed-image">
-            <img style={{width:"inherit", height:"inherit"}} src={img} alt="random" />
+            <img style={{width:"inherit", height:"inherit"}} src={url} alt="random" />
        </div>
 
        <div className="feed-action">
@@ -24,10 +32,10 @@ const Feed =(props)=>{
           <a href="#bookmark"><FontAwesomeIcon icon="bookmark" size="lg" pull="right" /></a>
        </div>
        <div className="likes">
-        200 likes
+        {likes} likes
        </div>
        <div className="comments">
-        <span className="u-link"><Link to="/user" >us_er</Link></span> some text about pic
+        <span className="u-link">{desc ? (<Link to="/user" >{insta}</Link>):null }</span> {desc}
        </div>
     </div>
   );

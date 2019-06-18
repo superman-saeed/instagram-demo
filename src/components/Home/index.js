@@ -22,7 +22,12 @@ class Home extends React.Component {
         </div>
 
        <PhotoConsumer>
-       {arr => arr.map((x,y)=><Feed key={y} />)}
+       {arr =>(
+         arr.length?
+         arr.map((x,y)=>(<Feed json={x} key={y} />))
+         :(<div>loading</div>)
+
+       )}
 
        </PhotoConsumer>
       </div>
