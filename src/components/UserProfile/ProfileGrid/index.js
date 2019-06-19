@@ -6,11 +6,17 @@ class Gallery extends React.Component {
     super(props);
     this.list = [1,2,0,4,5,6,7,8];
   }
+
+
+
   render(){
+
     const elements= this.list.map((num,i)=>
-     <div className="photo-frame" key={i}>
-     <div className="gallery-photo">{num}</div>
+       <div className="photo-frame" key={i}>
+       <div className="gallery-photo">{num}</div>
     </div>);
+
+
     return (
       <div className="gallery">
        {elements}

@@ -1,5 +1,5 @@
 import React from "react";
-import SearchGrid from "../SearchGrid";
+import SearchGrid from "./SearchGrid";
 
 const gridArr =[1,2,3,4,5,6,7];
 

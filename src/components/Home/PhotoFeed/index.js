@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {getInfo} from "../../lib/data.js"
+import {getInfo} from "../../../lib/data.js"
 /*
  component for stories and posts
 

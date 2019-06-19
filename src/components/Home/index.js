@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Feed from "../PhotoFeed";
+import Feed from "./PhotoFeed";
 import {PhotoConsumer} from "../App/context";
 
 class Home extends React.Component {

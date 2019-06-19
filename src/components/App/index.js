@@ -5,7 +5,7 @@ import User from "../UserProfile";
 import Upload from "../Upload/index.js";
 import Search from "../Search";
 import Activity from "../Activity";
-import Navigation from "../Nav";
+import Navigation from "./Nav";
 import * as Routes from "../../constants/routes";
 import {PhotoProvider} from "./context";
 import {listPhotos} from "../../lib/Unsplash";

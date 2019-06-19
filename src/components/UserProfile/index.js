@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ProfileGrid from "../ProfileGrid";
+import ProfileGrid from "./ProfileGrid";
 import Tag from "./Tag";
 /*
  user component => photo grid,p single photo colectiond, photo tags, bookmarks
@@ -24,7 +24,6 @@ function Photos({link}){
     <Router>
       <div className="photo-line bborder">
         <div><Link to={`${link}/gallery`}><FontAwesomeIcon icon="th" size="lg" /></Link></div>
-        <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="map" size="lg" /></Link></div>
         <div><Link to={`${link}/tag`}><FontAwesomeIcon icon="bookmark" size="lg" /></Link></div>
         <div><Link to="/user"><FontAwesomeIcon icon="id-card-alt" size="lg" /></Link></div>
       </div>
