@@ -33,7 +33,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="app">
-        <PhotoProvider value={this.state.url}>
+        <PhotoProvider value={[]}>
             <Router>
             <Route exact
               path={Routes.LANDING}
