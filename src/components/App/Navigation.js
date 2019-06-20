@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from "react-router-dom";
-import * as Routes from "../../../constants/routes";
+import * as Routes from "../../constants/routes";
 
 // App nav
 class Nav extends React.Component{
@@ -17,7 +17,7 @@ class Nav extends React.Component{
 
       <div><Link to={Routes.ACTIVITY}><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
 
-      <div><Link to={Routes.USER}><FontAwesomeIcon icon="user" size="lg" /></Link></div>
+      <div><Link to={`${Routes.USER}/default`}><FontAwesomeIcon icon="user" size="lg" /></Link></div>
 
       </div>
       </div>

@@ -1,35 +1,45 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Feed from "./PhotoFeed";
-import {PhotoConsumer} from "../App/context";
+import Topbar from "./Topbar";
+import StoryLine from "./StoryLine";
+import {listPhotos} from "../../lib/Unsplash";
 
 class Home extends React.Component {
 
-  render(){
+  constructor(props){
+    super(props);
+    this.state={
+      pages:[]
+    }
+    this.mount = true;
+  }
+  componentDidMount(){
+    const {pages} = this.state;
+    if(this.mount && pages.length===0){
+       listPhotos().then((data)=>{
+         console.log(data)
+         this.setState({pages:data})
+       }).catch((err)=> console.log(err));
+     }
 
+  }
+
+  componentWillUnmount(){
+    this.mount =false;
+  }
+
+  render(){
+    this.flist=[]
     return (
       <div>
-        <div className="top-bar">
-          <a href="#pic"><FontAwesomeIcon pull="left" icon="camera" size="lg" /></a>
-          <h2>Instagram</h2>
-          <a href="#addUser"><FontAwesomeIcon icon="user-plus" flip="horizontal" size="lg" /></a>
-        </div>
+        <Topbar />
+        <StoryLine />
+       {(this.state.pages.length ?
+         this.state.pages.map((json,key)=>(<Feed json={json} key={key} />))
+        :(<div>loading</div>)
 
-        <div className="stories">
-          <span className="my-story">
-          <FontAwesomeIcon icon="plus-circle" size="lg" />
-          </span>
-        </div>
+      )}
 
-       <PhotoConsumer>
-       {arr =>(
-         arr.length?
-         arr.map((x,y)=>(<Feed json={x} key={y} />))
-         :(<div>loading</div>)
-
-       )}
-
-       </PhotoConsumer>
       </div>
     );
   }

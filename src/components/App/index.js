@@ -5,35 +5,17 @@ import User from "../UserProfile";
 import Upload from "../Upload/index.js";
 import Search from "../Search";
 import Activity from "../Activity";
-import Navigation from "./Nav";
+import Navigation from "./Navigation";
 import * as Routes from "../../constants/routes";
-import {PhotoProvider} from "./context";
-import {listPhotos} from "../../lib/Unsplash";
-
 
 /*
   Main navigation component and routing
 */
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      url:[]
-    }
-  }
-  componentDidMount(){
-    const {url} = this.state;
-    if(!(url.length)){
-     listPhotos().then((data)=>{
-       console.log(data)
-       this.setState({url:data})
-     }).catch((err)=> console.log(err));
-   }
-  }
+
   render(){
     return (
       <div className="app">
-        <PhotoProvider value={[]}>
             <Router>
             <Route exact
               path={Routes.LANDING}
@@ -41,7 +23,7 @@ class App extends React.Component {
 
              <Route path={Routes.ACTIVITY} component={Activity} />
 
-             <Route path={Routes.USER} component={User} />
+             <Route path={`${Routes.USER}/:id`} component={User} />
 
              <Route path={Routes.UPLOAD} component={Upload} />
 
@@ -49,7 +31,6 @@ class App extends React.Component {
 
              <Navigation />
             </Router>
-        </PhotoProvider>
       </div>
     );
   }

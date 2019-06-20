@@ -2,5 +2,5 @@ import React from "react";
 
 const UnsplashContext = React.createContext();
 export default UnsplashContext;
-export const PhotoProvider = UnsplashContext.Provider;
-export const PhotoConsumer = UnsplashContext.Consumer;
+export const Provider = UnsplashContext.Provider;
+export const Consumer = UnsplashContext.Consumer;
