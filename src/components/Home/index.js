@@ -4,21 +4,22 @@ import Topbar from "./Topbar";
 import StoryLine from "./StoryLine";
 import {listPhotos} from "../../lib/Unsplash";
 
-class Home extends React.Component {
 
+class Home extends React.Component {
   constructor(props){
     super(props);
-    this.state={
-      pages:[]
-    }
+    this.store = this.props.getState;
+    this.setStore = this.props.setState;
     this.mount = true;
   }
+
   componentDidMount(){
-    const {pages} = this.state;
+    const {pages} = this.store();
+
     if(this.mount && pages.length===0){
        listPhotos().then((data)=>{
          console.log(data)
-         this.setState({pages:data})
+         this.setStore({pages:data})
        }).catch((err)=> console.log(err));
      }
 
@@ -29,13 +30,13 @@ class Home extends React.Component {
   }
 
   render(){
-    this.flist=[]
+    console.log( "Home =" + (typeof this.setStore));
     return (
       <div>
         <Topbar />
         <StoryLine />
-       {(this.state.pages.length ?
-         this.state.pages.map((json,key)=>(<Feed json={json} key={key} />))
+       {(this.store().pages.length ?
+         this.store().pages.map((json,key)=>(<Feed json={json} key={key} />))
         :(<div>loading</div>)
 
       )}
