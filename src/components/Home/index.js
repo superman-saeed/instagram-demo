@@ -14,13 +14,16 @@ class Home extends React.Component {
   }
 
   componentDidMount(){
-    const {pages} = this.store();
+    const {pages_feed} = this.store();
+    let request;
 
-    if(this.mount && pages.length===0){
-       listPhotos().then((data)=>{
+    if(this.mount && pages_feed.length===0){
+       request = listPhotos();
+       request.then((data)=>{
          console.log(data)
-         this.setStore({pages:data})
-       }).catch((err)=> console.log(err));
+         this.setStore({pages_feed:data})
+       })
+       request.catch((err)=> console.error("error from app" ));
      }
 
   }
@@ -30,13 +33,13 @@ class Home extends React.Component {
   }
 
   render(){
-    console.log( "Home =" + (typeof this.setStore));
+
     return (
       <div>
         <Topbar />
         <StoryLine />
-       {(this.store().pages.length ?
-         this.store().pages.map((json,key)=>(<Feed json={json} key={key} />))
+       {(this.store().pages_feed.length ?
+         this.store().pages_feed.map((json,key)=>(<Feed json={json} key={key} />))
         :(<div>loading</div>)
 
       )}

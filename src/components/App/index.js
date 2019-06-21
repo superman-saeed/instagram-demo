@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      pages:[]
+      pages_feed:[]
     }
     this.setStore = this.setStore.bind(this);
 
@@ -28,20 +28,22 @@ class App extends React.Component {
  getStore=()=>this.state;
 
   render(){
-    console.log( "app =" + typeof this.setStore);
+
     return (
       <div className="app">
       <Provider value={this.state}>
             <Router>
             <Route exact
               path={Routes.LANDING}
-              render={()=>(<Home
+              render={(props)=>(
+                <Home {...props}
                 getState={this.getStore}
                 setState={this.setStore} /> )} />
 
              <Route path={Routes.ACTIVITY} component={Activity} />
 
-             <Route path={`${Routes.USER}/:id`} component={User} />
+             <Route
+             path={`${Routes.USER}/:id`} component={User} />
 
              <Route path={Routes.UPLOAD} component={Upload} />
 

@@ -9,6 +9,8 @@ export function getInfo(json){
 
   const {
     instagram_username,
+    profile_image,
+    username
 
   } = user;
 
@@ -19,7 +21,9 @@ export function getInfo(json){
     likes:likes,
     desc: description,
     insta : instagram_username,
-    
+    profile_image:profile_image.small,
+    username:username
+
   }
 
 

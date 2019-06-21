@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function UserDetails(props){
+  const {name, bio ,profile_image} = props.info
   return(
     <div>
     <div className="user top-bar">
@@ -23,9 +24,9 @@ function UserDetails(props){
      <div className="edit"><button>Edit Profile</button></div>
     </div>
     <div className="name-details">
-    <p>Name</p>
-    <p>App still in progress</p>
-    <p>url</p>
+    <p>{name}</p>
+    <span>{bio}</span>
+
     </div>
     </div>
   )

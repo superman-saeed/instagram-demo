@@ -1,6 +1,7 @@
 import React from "react";
 import UserDetails from "./UserDetails";
 import PhotoAlbum from "./PhotoAlbum";
+import {Consumer} from "../App/context";
 /*
  user component => photo grid,p single photo colectiond, photo tags, bookmarks
 */
@@ -14,6 +15,7 @@ class User extends React.Component {
       collection:false
     }
     this.path = this.props.match.params.id;
+    console.log(this.path);
   }
 
   dir=(e)=>{
@@ -50,10 +52,20 @@ class User extends React.Component {
   }
 
   render(){
+
     return (
       <div>
-        <UserDetails />
-
+        <Consumer>
+          { state=> {
+          const person= state.pages_feed.filter((page)=>
+            (page.user.username === this.path));
+            const info = person.length ?
+            person[0].user:
+            {name:"loading name", bio:"bio",username:"unknown"};
+            console.log(person[0]);
+            return (<UserDetails info={info} />)}
+          }
+        </Consumer>
         <PhotoAlbum
           userProps={this.path}
           click={this.dir}
