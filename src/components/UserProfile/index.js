@@ -6,6 +6,25 @@ import {Consumer} from "../App/context";
  user component => photo grid,p single photo colectiond, photo tags, bookmarks
 */
 
+const FindComponentInfo=(state, context)=>{
+  const person= state.pages_feed.filter(
+    (page)=>{
+      return   (page.user.username === context.path);
+    })
+
+    const info = person.length ?
+    person[0].user:
+    {
+      name:"loading name",
+     bio:"bio",
+     username:"unknown",
+     profile_image:{small:null,medium:null}
+   };
+    console.log(person[0]);
+
+    return(<UserDetails info={info} />)
+}
+
 class User extends React.Component {
   constructor(props){
     super(props);
@@ -57,13 +76,7 @@ class User extends React.Component {
       <div>
         <Consumer>
           { state=> {
-          const person= state.pages_feed.filter((page)=>
-            (page.user.username === this.path));
-            const info = person.length ?
-            person[0].user:
-            {name:"loading name", bio:"bio",username:"unknown"};
-            console.log(person[0]);
-            return (<UserDetails info={info} />)}
+            return (FindComponentInfo(state,this))}
           }
         </Consumer>
         <PhotoAlbum

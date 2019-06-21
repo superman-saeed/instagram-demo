@@ -10,7 +10,11 @@ function UserDetails(props){
       <div className="user-details">
        <div className="user-pic">
        <span className="my-story">
-       <FontAwesomeIcon icon="plus-circle" size="sm" />
+       <img style={{width:"inherit", height:"inherit",
+              borderRadius:"50%"
+            }}
+       src={profile_image.medium} alt="random" />
+       <FontAwesomeIcon icon="plus-circle" size="lg" />
        </span></div>
        <div className="user-profile">
         <div><h2>1</h2><span>posts</span></div>
