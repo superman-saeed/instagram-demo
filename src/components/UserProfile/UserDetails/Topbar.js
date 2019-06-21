@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Topbar =({header})=>{
 
@@ -9,3 +11,5 @@ const Topbar =({header})=>{
     <a href="#addUser"><FontAwesomeIcon icon="user-plus" size="lg" /></a>
   </div>);
 }
+
+export default Topbar;
