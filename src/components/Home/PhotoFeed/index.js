@@ -38,11 +38,7 @@ const Feed =(props)=>{
            </a>
        </div>
        <div className="feed-image">
-       <picture>
-          <source media="(max-width:320px)" srcSet={url.thumb} />
-          <source media="(max-width:375px)" srcSet={url.small} />
-          <img src={url.thumb} alt="collections"  style={{ width:"inherit", height:"inherit" }} />
-        </picture>
+            <img style={{width:"inherit", height:"inherit"}} src={url} alt="random" />
        </div>
 
        <div className="feed-action">

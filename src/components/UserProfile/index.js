@@ -3,7 +3,7 @@ import UserDetails from "./UserDetails";
 import PhotoAlbum from "./PhotoAlbum";
 import {Consumer} from "../App/context";
 /*
- user component => photo grid,p single photo colectiond, photo tags, bookmarks
+ user component => photo isgrid,p single photo colectiond, photo istags, bookmarks
 */
 
 const FindComponentInfo=(state, context)=>{
@@ -20,7 +20,7 @@ const FindComponentInfo=(state, context)=>{
      username:"unknown",
      profile_image:{small:null,medium:null}
    };
-
+    console.log(person[0]);
 
     return(<UserDetails info={info} />)
 }
@@ -29,38 +29,42 @@ class User extends React.Component {
   constructor(props){
     super(props);
     this.state ={
-      grid:true,
-      tags:false,
-      collection:false
+      isgrid:true,
+      istags:false,
+      iscollection:false,
+      gridPhotos:[]
     }
     this.path = this.props.match.params.id;
     console.log(this.path);
+    this.setStore =this.setStore.bind(this);
+    this.getStore =this.getStore.bind(this);
   }
 
-  dir=(e)=>{
+  // tabs for user profile
+  tabClicked=(e)=>{
     e.preventDefault();
     switch (e.currentTarget.hash) {
 
       case "#grid":
           this.setState({
-            grid: true,
-            tags:false,
-            collection:false,
+            isgrid: true,
+            istags:false,
+            iscollection:false,
           });
         break;
 
       case "#list":
         this.setState({
-          grid: false,
-          tags:false,
-          collection:true,
+          isgrid: false,
+          istags:false,
+          iscollection:true,
         });
         break;
       case "#tags":
         this.setState({
-          grid: false,
-          tags:true,
-          collection:false,
+          isgrid: false,
+          istags:true,
+          iscollection:false,
         });
 
         break;
@@ -70,6 +74,12 @@ class User extends React.Component {
 
   }
 
+setStore=(obj)=>{
+   return this.setState(obj);
+}
+getStore(){
+  return this.state;
+}
   render(){
 
     return (
@@ -80,9 +90,11 @@ class User extends React.Component {
           }
         </Consumer>
         <PhotoAlbum
-          userProps={this.path}
-          click={this.dir}
-          path={this.state}
+          userRoute={this.path}
+          tabClicked={this.tabClicked}
+          getState={this.getStore}
+          setState ={this.setStore}
+
         />
       </div>
     );

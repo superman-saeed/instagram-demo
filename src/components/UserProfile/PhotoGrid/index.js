@@ -1,26 +1,23 @@
 import React from "react";
+import {getUserPhotos} from "../../../lib/Unsplash";
 
 
 class PhotoGrid extends React.Component {
   constructor(props){
     super(props);
-    this.list = [1,2,0,4,5,6,7,8];
-    this.state={
-      pages:[]
-    }
     this.mount =true;
+    this.path = this.props.path;
+    this.setState = this.props.setState;
+    this.photos = this.props.photos;
   }
 
 componentDidMount(){
-  const {path} = this.props,
-  {pages} = this.state,
-  {user} = pages.length ? pages[0]:{username:""};
-  if(this.mount){
-    if(pages.length >0 && user.username!==path){
 
-    }else{
+  if(this.mount && this.photos().gridPhotos.length ===0){
+    getUserPhotos(this.path).then((data)=>{
+       this.setState({gridPhotos:data});
+    })
 
-    }
   }
 }
 
@@ -30,10 +27,9 @@ componentWillUnmount(){
 
 
   render(){
-
-    const elements= this.list.map((num,i)=>
+    const elements= this.photos().gridPhotos.map((json,i)=>
        <div className="photo-frame" key={i}>
-       <div className="gallery-photo">{num}</div>
+       <div className="gallery-photo">{json.urls.small}</div>
     </div>);
 
 
