@@ -13,8 +13,8 @@ export const getUserPhotos= (obj)=>{
   return (unsplash.users.photos(obj)
   .then((data)=>data.json()));
 }
-export const listPhotos =()=>{
-  return (unsplash.photos.listPhotos(3, 9)
+export const listPhotos =(page)=>{
+  return (unsplash.photos.listPhotos(page, 10)
   .then((data)=>data.json()));
 
   }

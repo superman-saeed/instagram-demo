@@ -20,7 +20,7 @@ const FindComponentInfo=(state, context)=>{
      username:"unknown",
      profile_image:{small:null,medium:null}
    };
-    console.log(person[0]);
+
 
     return(<UserDetails info={info} />)
 }

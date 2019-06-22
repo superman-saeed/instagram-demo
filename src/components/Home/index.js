@@ -18,7 +18,7 @@ class Home extends React.Component {
     let request;
 
     if(this.mount && pages_feed.length===0){
-       request = listPhotos();
+       request = listPhotos((pages_feed.length + 1));
        request.then((data)=>{
          console.log(data)
          this.setStore({pages_feed:data})

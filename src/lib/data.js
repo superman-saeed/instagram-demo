@@ -14,10 +14,10 @@ export function getInfo(json){
 
   } = user;
 
-  const {thumb} = urls;
+  
 
   return {
-    url:thumb,
+    url:urls,
     likes:likes,
     desc: description,
     insta : instagram_username,
