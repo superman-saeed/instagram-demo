@@ -18,9 +18,14 @@ class Home extends React.Component {
     let request;
 
     if(this.mount && pages_feed.length===0){
-       request = listPhotos((pages_feed.length +1));
+       request = listPhotos(
+         {
+           page:(pages_feed.length +1),
+          orientation:"squarish"
+
+         }
+       );
        request.then((data)=>{
-         console.log(data)
          this.setStore({pages_feed:data})
        })
        request.catch((err)=> console.error("error from app" ));
