@@ -1,11 +1,12 @@
 import React from "react";
 import {getUserPhotos} from "../../../lib/Unsplash";
 
-const img={
-  width:"inherit",
-  height:"inherit"
-}
 
+const style={
+  width:"100%",
+  height:"100%",
+  objectFit:"cover"
+}
 class PhotoGrid extends React.Component {
   constructor(props){
     super(props);
@@ -33,8 +34,8 @@ componentWillUnmount(){
   render(){
     const elements= this.photos().gridPhotos.map((json,i)=>
        <div className="photo-frame" key={i}>
-       <div style={{background:"url(" + json.urls.thumb + ")",
-         backgroundSize:"cover" }}  className="gallery-photo">
+       <div  className="gallery-photo">
+       <img style={style} src={json.urls.thumb} alt="no desciption" />
        </div>
     </div>);
 

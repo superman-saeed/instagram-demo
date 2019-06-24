@@ -17,7 +17,8 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      pages_feed:[]
+      pages_feed:[],
+      search_feed:[]
     }
     this.setStore = this.setStore.bind(this);
 
@@ -35,7 +36,7 @@ class App extends React.Component {
             <Router>
             <Route exact
               path={Routes.LANDING}
-              render={(props)=>(
+              render={props=>(
                 <Home {...props}
                 getState={this.getStore}
                 setState={this.setStore} /> )} />
@@ -47,7 +48,11 @@ class App extends React.Component {
 
              <Route path={Routes.UPLOAD} component={Upload} />
 
-             <Route path={Routes.SEARCH} component={Search} />
+             <Route path={Routes.SEARCH}
+             render={props=>(
+               <Search {...props}
+               getState={this.getStore}
+               setState={this.setStore} />)} />
 
              <Navigation />
             </Router>

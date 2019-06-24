@@ -20,8 +20,7 @@ class Home extends React.Component {
     if(this.mount && pages_feed.length===0){
        request = listPhotos(
          {
-           page:(pages_feed.length +1),
-          orientation:"squarish"
+           page:(pages_feed.length +1) // for pagination
 
          }
        );

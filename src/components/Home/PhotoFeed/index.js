@@ -8,6 +8,12 @@ import * as route from "../../../constants/routes";
 
 */
 
+const style={
+  objectFit:"cover",
+  width:"inherit",
+  height:"inherit"
+}
+
 const Feed =(props)=>{
   const {json} = props;
   const {
@@ -38,7 +44,9 @@ const Feed =(props)=>{
            </a>
        </div>
        <div className="feed-image">
-            <img style={{width:"inherit", height:"inherit"}} src={url} alt="random" />
+          <div className="square">
+            <img style={style} src={url} alt="random" />
+          </div>
        </div>
 
        <div className="feed-action">
