@@ -5,19 +5,16 @@
   width: 100%;
   border-top: 0.5px solid $coblank;
   z-index: 1;
-  background-color: #fff;
 
   .main-nav{
    display: grid;
    grid-template-columns: repeat(5,1fr);
       div{
-        padding: $d-pad;
+        padding: $padding;
         text-align: center;
 
       }
-      a{
-       color: #000;
-      }
+
 
   }
 }

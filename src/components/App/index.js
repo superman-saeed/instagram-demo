@@ -31,7 +31,7 @@ class App extends React.Component {
   render(){
 
     return (
-      <div className="app">
+      <div className="app light">
       <Provider value={this.state}>
             <Router>
             <Route exact

@@ -9,7 +9,7 @@
 
 .user-details{
  display: grid;
- grid-template-columns: 1fr 1fr 1fr;
+ grid-template-columns: repeat(3,1fr);
  padding: 15px 16px;
 
 
@@ -44,17 +44,15 @@
   text-align: center;
 
 }
-.edit{
 
-}
 .edit button{
   grid-column: 1/4;
   font-weight: $bold;
   padding: 6px 10px;
   text-align: center;
-  background-color: #fff;
+  background-color: $white;
   border: none;
-  border: 1px solid $coblank;
+  border: 1px solid $blank;
   border-radius: 5px;
 }
 .name-details p:first-child{
@@ -62,14 +60,15 @@
 
 }
 .name-details{
-   padding: 10px;
+   padding: $padding;
+   font-size: 15px;
 
 
 }
 .name-details p{
   margin: 2px;
 }
-.name-details p:nth-last-child(1){
+.name-details p:last-child{
   margin-bottom: 5px;
 }
 
@@ -80,9 +79,9 @@
 }
 
 .bborder{
-  border-bottom: 1px solid $coblank;
-  border-top: 1px solid $coblank;
-  padding: 10px;
+  border-bottom: 1px solid $blank;
+  border-top: 1px solid $blank;
+  padding: $padding;
 }
 
 .gallery{
@@ -96,7 +95,7 @@
   flex-basis: calc(33.333% - 1px);
   box-sizing: border-box;
   margin: 0.5px;
-  background-color: $coblank;
+  background-color: $blank;
 
 }
 

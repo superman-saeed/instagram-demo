@@ -4,6 +4,7 @@ main component to start app
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import 'material-icons/iconfont/material-icons.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './SCSS/index.scss';
 

@@ -1,6 +1,6 @@
 .feed{
-  margin-top:$d-pad;
-  margin-bottom:$d-pad;
+  margin-top:$padding;
+  margin-bottom:$padding;
 
   a{
     font-weight:$bold;
@@ -51,9 +51,9 @@
   top: 0; left: 0;
 }
 .comments{
-  padding: 2px $d-pad;
+  padding: 2px $padding;
 }
 .likes{
   font-weight: $bold;
-  padding: 2px $d-pad;
+  padding: 2px $padding;
 }
