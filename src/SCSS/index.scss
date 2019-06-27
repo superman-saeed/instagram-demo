@@ -40,6 +40,9 @@ $circle:50%;
   svg{
     @extend %color;
   }
+  .desktop-navbar{
+    @extend %background;
+  }
 
 }
 

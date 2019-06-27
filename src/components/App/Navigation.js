@@ -7,19 +7,25 @@ import * as Routes from "../../constants/routes";
 class Nav extends React.Component{
   render(){
     return (
+      <div>
       <div className="nav-container">
-      <div className="main-nav">
-      <div> <Link to={Routes.LANDING}><FontAwesomeIcon icon="home" size="lg" /></Link></div>
+          <div className="main-nav">
+            <div> <Link to={Routes.LANDING}><FontAwesomeIcon icon="home" size="lg" /></Link></div>
 
-      <div> <Link to={Routes.SEARCH}><FontAwesomeIcon icon="search" size="lg" /></Link></div>
+            <div> <Link to={Routes.SEARCH}><FontAwesomeIcon icon="search" size="lg" /></Link></div>
 
-      <div> <Link to={Routes.UPLOAD}><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
+            <div> <Link to={Routes.UPLOAD}><FontAwesomeIcon icon="plus-square" size="lg" /></Link></div>
 
-      <div><Link to={Routes.ACTIVITY}><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
+            <div><Link to={Routes.ACTIVITY}><FontAwesomeIcon icon="heart" size="lg" /></Link></div>
 
-      <div><Link to={`${Routes.USER}/default`}><FontAwesomeIcon icon="user" size="lg" /></Link></div>
+            <div><Link to={`${Routes.USER}/default`}><FontAwesomeIcon icon="user" size="lg" /></Link></div>
 
+          </div>
       </div>
+       <div className="desktop-navbar">
+
+    
+       </div>
       </div>
     );
   }

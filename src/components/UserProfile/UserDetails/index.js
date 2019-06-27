@@ -1,28 +1,52 @@
 import React from "react";
 import Topbar from "./Topbar";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function UserDetails(props){
-  const {name, bio ,profile_image,username} = props.info
+const ProfilePhoto=({medium,large})=>(
+
+  <div className="profile-photo">
+    <picture >
+      <source media="(max-width:375px)" srcSet={medium}  />
+      <source srcSet={large}  />
+      <img src={medium} alt="profile" />
+    </picture>
+ </div>
+
+);
+
+const ProfileInfo=()=>(
+  <div className="profile_info">
+      <ul>
+        <li>1
+          <br/><span>Likes</span>
+        </li>
+        <li>2
+          <br/><span>Post</span>
+        </li>
+        <li>3
+          <br/><span>Views</span>
+        </li>
+      </ul>
+  </div>
+)
+
+
+
+const UserDetails=({info})=>{
+  const {name, bio ,profile_image,username} = info;
+
+
   return(
     <div>
       <Topbar header={username} />
-      <div className="user-details">
-       <div className="user-pic">
-       <span className="my-story">
-       <img style={{width:"inherit", height:"inherit",
-              borderRadius:"50%"
-            }}
-       src={profile_image.medium} alt="random" />
-       <FontAwesomeIcon icon="plus-circle" size="lg" />
-       </span></div>
-       <div className="user-profile">
-        <div><h2>1</h2><span>posts</span></div>
-        <div><h2>2</h2><span>followers</span></div>
-        <div><h2>3</h2><span>following</span></div>
-       </div>
-       <div className="edit"><button>Edit Profile</button></div>
+
+      <div className="header">
+          <ProfilePhoto
+            medium={profile_image.medium}
+            large={profile_image.large} />
+          <ProfileInfo />
       </div>
+
       <div className="name-details">
       <p>{name}</p>
       <span>{bio}</span>
