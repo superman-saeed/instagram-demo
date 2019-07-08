@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import React from "react";
+import {Provider} from "react-redux";
+import store from "../../redux/store";
 import Home from "../Home";
 import User from "../UserProfile";
 import Upload from "../Upload/index.js";
@@ -7,39 +9,23 @@ import Search from "../Search";
 import Activity from "../Activity";
 import Navigation from "./Navigation";
 import * as Routes from "../../constants/routes";
-import {Provider} from "./context";
 
 /*
   Main navigation component and routing
 */
 class App extends React.Component {
 
-  constructor(props){
-    super(props);
-    this.state={
-      pages_feed:[],
-      search_feed:[]
-    }
-    this.setStore = this.setStore.bind(this);
-
-  }
- setStore(obj){
-   this.setState(obj)
- }
- getStore=()=>this.state;
-
+  
   render(){
 
     return (
+      <Provider store={store}>
       <div className="app light">
-      <Provider value={this.state}>
             <Router>
             <Route exact
               path={Routes.LANDING}
               render={props=>(
-                <Home {...props}
-                getState={this.getStore}
-                setState={this.setStore} /> )} />
+                <Home {...props}  /> )} />
 
              <Route path={Routes.ACTIVITY} component={Activity} />
 
@@ -50,14 +36,12 @@ class App extends React.Component {
 
              <Route path={Routes.SEARCH}
              render={props=>(
-               <Search {...props}
-               getState={this.getStore}
-               setState={this.setStore} />)} />
+               <Search {...props} />)} />
 
              <Navigation />
             </Router>
-      </Provider>
       </div>
+     </Provider>
     );
   }
 }

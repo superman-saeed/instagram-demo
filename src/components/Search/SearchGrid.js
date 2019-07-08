@@ -6,64 +6,21 @@ const style={
   width:"inherit",
   height:"inherit"
 };
+const listPhotos=(data)=>{
+  const list= data.map((json,i)=>
+     <div className="photo-frame" key={i}>
+     <div  className="gallery-photo">
+     <img style={style} src={json.urls.thumb} alt="no desciption" />
+     </div>
+  </div>);
 
-const SearchGrid =(props)=>{
-const {json} = props;
-console.log(["SearchGrid",json]);
+  return list;
+}
+
+const SearchGrid =({json})=>{
   return(
-    <div className="photo-grid">
-         <div className="g-photo">
-           <div className="g-one">
-              <img style={style} src={json[0].urls.small} alt="random" />
-           </div>
-         </div>
-
-         <div className="g-photo">
-           <div className="g-one">
-              <img style={style} src={json[1].urls.small} alt="random" />
-           </div>
-         </div>
-
-         <div className="g-photo">
-           <div className="g-one">
-              <img style={style} src={json[2].urls.small} alt="random" />
-           </div>
-         </div>
-
-         <div className="g-photo">
-           <div className="g-one">
-              <img style={style} src={json[3].user.profile_image.large} alt="random" />
-           </div>
-         </div>
-
-         <div className="g-photo db-grid">
-            <div className="db-inner">
-                <div> <img style={style} src={json[4].urls.small} alt="random" /> </div>
-            </div>
-
-            <div className="db-inner">
-                <div><img style={style} src={json[5].urls.small} alt="random" /></div>
-            </div>
-        </div>
-
-
-        <div className="g-photo">
-          <div className="g-one">
-             <img style={style} src={json[6].urls.small} alt="random" />
-          </div>
-        </div>
-
-        <div className="g-photo">
-          <div className="g-one">
-             <img style={style} src={json[7].urls.small} alt="random" />
-          </div>
-        </div>
-
-        <div className="g-photo">
-          <div className="g-one">
-             <img style={style} src={json[8].urls.small} alt="random" />
-          </div>
-        </div>
+    <div className="gallery">
+     {listPhotos(json)}
     </div>
   )
 }

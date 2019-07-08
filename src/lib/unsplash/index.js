@@ -14,7 +14,10 @@ export const getUserPhotos= (obj)=>{
   .then((data)=>data.json()));
 }
 export const listPhotos =(page)=>{
-  return (unsplash.photos.listPhotos(page, 9)
+  return (unsplash.photos.listPhotos(page)
   .then((data)=>data.json()));
 
+  }
+  export const getRndInteger =(min, max)=> {
+    return Math.floor(Math.random() * (max - min) ) + min;
   }

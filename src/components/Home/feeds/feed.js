@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {getInfo} from "../../../lib/data.js";
 import * as route from "../../../constants/routes";
+
 /*
  component for stories and posts
 

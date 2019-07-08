@@ -1,14 +1,13 @@
 import React from "react";
 import Topbar from "./Topbar";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ProfilePhoto=({medium,large})=>(
+const ProfilePhoto=()=>(
 
   <div className="profile-photo">
     <picture >
-      <source media="(max-width:375px)" srcSet={medium}  />
-      <source srcSet={large}  />
-      <img src={medium} alt="profile" />
+      <source media="(max-width:375px)" srcSet={null}  />
+      <source srcSet={null}  />
+      <img src={null} alt="profile" />
     </picture>
  </div>
 
@@ -33,23 +32,21 @@ const ProfileInfo=()=>(
 
 
 const UserDetails=({info})=>{
-  const {name, bio ,profile_image,username} = info;
+
 
 
   return(
     <div>
-      <Topbar header={username} />
+      <Topbar header={"username"} />
 
       <div className="header">
-          <ProfilePhoto
-            medium={profile_image.medium}
-            large={profile_image.large} />
+          <ProfilePhoto />
           <ProfileInfo />
       </div>
 
       <div className="name-details">
-      <p>{name}</p>
-      <span>{bio}</span>
+      <p>{"name"}</p>
+      <span>{"bio"}</span>
 
       </div>
     </div>
