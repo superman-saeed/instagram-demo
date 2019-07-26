@@ -1,0 +1,100 @@
+
+@mixin sprite-img($width, $height){
+  background-image: url("../img/background.png");
+  background-position: $width $height;
+  background-size: 355px 344px;
+  background-repeat: no-repeat;
+}
+
+.is24by24{
+  height: 24px;
+  width: 24px;
+}
+
+
+%instagram-sprite-size{
+  width: 108px;
+  height: 32px;
+
+}
+
+
+
+/*outl as outline*/
+
+.instagram-logo{
+  @extend %instagram-sprite-size;
+  @include sprite-img(-68px,-195px);
+  display: inline-block;
+
+}
+
+.brand-logo{
+  @include sprite-img(-251px, -196px);
+  display: inline-block;
+}
+
+
+.home-icon-outl{
+  @include sprite-img(-50px, -295px);
+
+}
+
+.home-icon-solid{
+  @include sprite-img(-286px, -176px);
+
+}
+
+.explore-icon-outl{
+  @include sprite-img(-149px, -320px);
+
+}
+.explore-icon-solid{
+  @include sprite-img(-124px, -320px);
+}
+.upload-icon-outl{
+  @include sprite-img(-331px, -150px);
+}
+.camera-icon-outl{
+  @include sprite-img(-125px, -269px);
+}
+
+.activity-icon-outl{
+  @include sprite-img(0, -295px);
+}
+.activity-icon-solid{
+  @include sprite-img(-275px, -268px);
+}
+
+.user-icon-outl{
+  @include sprite-img(-174px, -268px);
+}
+
+.user-icon-solid{
+  @include sprite-img(-199px, -268px);
+}
+
+.compass-icon-outl{
+  @include sprite-img(-227px, -197px);
+}
+
+.direct-icon-outl{
+  @include sprite-img(-149px, -227px);
+
+}
+.comment-icon-outl{
+  @include sprite-img(-141px, -97px);
+
+}
+.upshare-icon-outl{
+  @include sprite-img(-224px, -319px);
+
+}
+.tag-icon-outl{
+  @include sprite-img(-98px, -319px);
+
+}
+.threedots-icon{
+  @include sprite-img(-330px, -125px);
+
+}

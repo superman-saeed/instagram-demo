@@ -1,4 +1,7 @@
-export const FETCH_HOME_FEED = "FETCH_HOME_FEED";
-export const LIKE_FEED = "LIKE_FEED";
-export const READ_FEED = "READ_FEED";
-export const FETCH_EXPLORE_FEED ="FETCH_EXPLORE_FEED";
+export const FETCH_ARTICLES = "fetch_article";
+export const SEEN_ARTICLE = "seen_article";
+export const LIKE_ARTICLE = "like_article";
+export const ADD_PROFILE = "add_profile";
+export const ADD_COMMENT = "add_comment";
+export const FETCH_EXPLORE= "fetch_explore";
+export const SEEN_EXPLORE_ARTICLE = "seen_explore_article";
