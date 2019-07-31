@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import Navigation from "./Navigation";
-import Feed  from "./Feed"
+import AllFeeds  from "./Feeds"
 
 class Home extends Component {
 
@@ -8,7 +8,7 @@ class Home extends Component {
     return(
       <div className="home app-body">
         <Navigation />
-        <Feed />
+        <AllFeeds />
       </div>
     );
   }

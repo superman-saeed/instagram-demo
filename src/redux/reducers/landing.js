@@ -1,10 +1,10 @@
 import * as actionType from "../../constants/actionTypes";
 
 const INITIALISE_STATE={
-  articles:[],
+  new_articles:[],
   recent_profiles:[],
   liked_articles:[],
-  viewed_articles:[],
+  seen_articles:[],
   error:{
     articles:null,
     liked_articles: null,
@@ -12,18 +12,21 @@ const INITIALISE_STATE={
   }
 }
 
+
 const landing =(state=INITIALISE_STATE, action)=>{
-  let {
-    articles,
-    recent_profiles,
-    liked_articles,
-    error
-  } = state;
+
 
   switch (action.type) {
 
     case actionType.FETCH_ARTICLES:
-      return {state,articles:[...articles,"added article"] };
+      console.log(action.payload);
+      return {
+        ...state,
+        new_articles:[
+          ...state.new_articles,
+           ...action.payload.new_articles
+         ]
+      };
 
     case actionType.LIKE_ARTICLE:
       return state;

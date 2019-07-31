@@ -1,4 +1,4 @@
-export const FETCH_ARTICLES = "fetch_article";
+export const FETCH_ARTICLES = "fetch_articles";
 export const SEEN_ARTICLE = "seen_article";
 export const LIKE_ARTICLE = "like_article";
 export const ADD_PROFILE = "add_profile";

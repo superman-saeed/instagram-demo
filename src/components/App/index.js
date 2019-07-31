@@ -11,13 +11,8 @@ const Home = lazy(()=> import("../Landing"));
 
 const App =()=>{
 
-  useEffect(()=>{
-    console.log("effect is working");
-
-  });
-
   return(
-    <Provider store={ store }>
+    <Provider store={ store } >
       <div>
         <Suspense fallback={<div>This is fallback</div>}>
           <Router>
@@ -27,7 +22,7 @@ const App =()=>{
 
         </Suspense>
       </div>
-    </Provider>
+   </Provider>
 
   )
 }
