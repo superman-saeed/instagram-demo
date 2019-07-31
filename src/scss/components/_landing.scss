@@ -1,0 +1,149 @@
+.home{
+
+}
+$feed-pad: 8px;
+
+.feed-article{
+  flex :1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.feed{
+  flex:1;
+
+
+}
+.landing-nav-container{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 5px 9px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* for feed nav and feed header flex hierachy*/
+.landing-nav, .feed-header{
+  display: flex;
+
+
+  .one,.three{
+   flex: 2;
+   align-self: center;
+
+  }
+  .two{
+    display: flex;
+    flex:5;
+    display: flex;
+    justify-content: center;
+  }
+  .three{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+}
+
+/* for feed header*/
+.feed-header{
+  padding: $feed-pad;
+  .two{
+    flex: 9;
+    justify-content: flex-start;
+
+  }
+  .feed-image{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0.7px solid #ccc;
+  }
+
+}
+
+.story-line{
+  display: none;
+}
+.feed-body{
+  img{
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.feed-footer{
+  padding: $feed-pad;
+
+}
+.feed-actions{
+   display: flex;
+
+  .left-actions{
+    flex:4;
+    display: flex;
+    justify-content: flex-start;
+
+    div{
+      margin-right: $feed-pad;
+    }
+  }
+
+  .right-actions{
+    flex:1;
+    display:flex;
+    justify-content: flex-end;
+  }
+}
+
+.feed-likes{
+  font-size: small;
+}
+
+@media (min-width:568px) and (max-width:667px) {
+  .landing-nav-container{
+    display: none;
+  }
+  .feed-article{
+    flex:1;
+
+  }
+  .feed{
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+  }
+
+}
+
+@media (min-width:668px){
+
+  .landing-nav-container{
+    display: none;
+  }
+  .feed-article{
+    flex:6;
+  }
+  .feed{
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+  }
+
+  .story-line{
+    display: initial;
+    flex:2;
+    margin-left: 10px;
+
+    .story-body{
+      position: sticky;
+      top: 90px;
+      border: 1px solid #ccc;
+    }
+  }
+  .footer{
+    color:grey;
+    font-size: 18px;
+  }
+
+}

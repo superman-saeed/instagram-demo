@@ -1,0 +1,73 @@
+body{
+  margin: 0;
+  font-size: 1.15em;
+  font-family: arial, sans-serif, monospace;
+}
+.center{
+  margin: auto;
+}
+.absolute{
+  position: absolute;
+}
+.white-theme{
+  background-color: #fff;
+}
+.container{
+
+}
+.app-body{
+  padding-top: 47px;
+  padding-bottom: 42px;
+}
+.content{
+
+  display: flex;
+}
+
+@media (min-width:568px) and (max-width:667px) {
+  .container{
+    margin: 0 30px 0;
+
+  }
+  .app-body{
+    padding-top: 68px;
+    padding-bottom: 5px;
+    background-color: #fafafa;
+
+
+  }
+
+}
+
+@media (min-width:668px) {
+
+  .container{
+    max-width: 995px;
+    margin: auto;
+  }
+  .app-body{
+    padding-top: 104px;
+    padding-bottom: 5px;
+    background-color: #fafafa;
+
+  }
+
+
+}
+
+
+a{
+  color:#000;
+  text-decoration: none;
+  font-family: arial;
+}
+
+a:hover{
+  color: #0000ff;
+}
+
+
+
+@import "./components/_sprite-icons.scss";
+@import "./components/_app.scss";
+@import "./components/_landing.scss";

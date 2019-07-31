@@ -1,0 +1,46 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import {
+  HOME,
+  EXPLORE,
+  ACTIVITY,
+  USER} from "../../../constants/routes.js"
+
+
+const  DesktopNav =()=>(
+  <div className="navigation-desk white-theme">
+    <div className="container">
+      <div className="nav-parent">
+
+        <div className="item1">
+        <div className="brand-logo is24by24"></div>
+          <Link to={ HOME }>
+            <div className="instagram-logo absolute"></div>
+          </Link>
+        </div>
+
+
+        <div className="item2">
+        </div>
+        <div className="item3">
+          <div>
+            <Link to={ EXPLORE }>
+              <div className="compass-icon-outl is24by24"></div>
+            </Link>
+          </div>
+
+          <div>
+            <div className="activity-icon-outl is24by24"></div>
+          </div>
+          <div>
+            <div className="user-icon-outl is24by24"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ </div>
+
+);
+
+export default DesktopNav;
