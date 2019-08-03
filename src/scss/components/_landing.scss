@@ -1,21 +1,33 @@
+$feed-pad: 8px 12px;
 .home{
 
 }
-$feed-pad: 8px;
 
-.feed-article{
-  flex :1;
+
+.feed-article,
+.home-header,
+.article-header,
+.right-side,
+.left-side,
+.article-actions,
+.left-actions,
+.right-actions,
+.center-side{
   display: flex;
-  flex-direction: column;
 
+}
+
+
+.article-feed{
+  flex :1;
+  flex-direction: column;
 }
 
 .feed{
   flex:1;
 
-
 }
-.landing-nav-container{
+.home-header-container{
   position: fixed;
   top:0;
   left: 0;
@@ -24,52 +36,60 @@ $feed-pad: 8px;
   border-bottom: 1px solid #f1f1f1;
 }
 
-/* for feed nav and feed header flex hierachy*/
-.landing-nav, .feed-header{
-  display: flex;
+.home-header{
 
+  .left-side,.right-side{
+    flex: 2;
+    align-self: center;
 
-  .one,.three{
-   flex: 2;
-   align-self: center;
-
-  }
-  .two{
-    display: flex;
-    flex:5;
-    display: flex;
-    justify-content: center;
-  }
-  .three{
-    display: flex;
-    justify-content: flex-end;
-  }
-
+   }
+   .center-side{
+     flex:5;
+     justify-content: center;
+   }
+   .right-side{
+     justify-content: flex-end;
+   }
 
 }
 
-/* for feed header*/
-.feed-header{
+/* for article header flex hierachy*/
+.article-header{
   padding: $feed-pad;
-  .two{
-    flex: 9;
-    justify-content: flex-start;
+  .right-side{
+     flex: 2;
+     align-self: center;
+     justify-content: flex-end;
 
   }
-  .feed-image{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 0.7px solid #ccc;
-  }
+    .left-side{
+      flex: 9;
+      justify-content: flex-start;
+
+
+    }
+    .article-header-image{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 0.7px solid #ccc;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+    img{
+      object-fit: cover;
+    }
 
 }
+
+
 
 .story-line{
   display: none;
 }
 .feed-body{
   img{
+    background-color: #ccc;
     width: 100%;
     object-fit: contain;
   }
@@ -78,32 +98,30 @@ $feed-pad: 8px;
   padding: $feed-pad;
 
 }
-.feed-actions{
-   display: flex;
+.article-actions{
 
   .left-actions{
     flex:4;
-    display: flex;
     justify-content: flex-start;
 
     div{
-      margin-right: $feed-pad;
+      margin-right: 8px;
     }
   }
 
   .right-actions{
     flex:1;
-    display:flex;
     justify-content: flex-end;
   }
 }
 
 .feed-likes{
+  margin-top: 5px;
   font-size: small;
 }
 
 @media (min-width:568px) and (max-width:667px) {
-  .landing-nav-container{
+  .home-header-container{
     display: none;
   }
   .feed-article{
@@ -119,31 +137,39 @@ $feed-pad: 8px;
 
 @media (min-width:668px){
 
-  .landing-nav-container{
-    display: none;
+.home-header-container{
+  display: none;
+}
+
+.article-feed{
+  flex:6;
+}
+
+.feed{
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+
+.story-line{
+  display: initial;
+  flex:2;
+  margin-left: 10px;
+
+  .story-container{
+    position: sticky;
+    top: 90px;
+
   }
-  .feed-article{
-    flex:6;
-  }
-  .feed{
-    margin-bottom: 30px;
+  .story-body{
     border: 1px solid #ccc;
   }
 
-  .story-line{
-    display: initial;
-    flex:2;
-    margin-left: 10px;
-
-    .story-body{
-      position: sticky;
-      top: 90px;
-      border: 1px solid #ccc;
-    }
-  }
   .footer{
     color:grey;
     font-size: 18px;
   }
+
+
+}
 
 }

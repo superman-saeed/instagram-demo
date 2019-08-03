@@ -1,4 +1,4 @@
-import React, {useEffect,useCallback} from "react";
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchNewArticles} from "../../../misc/utils.js";
 import Article from "./Article";
@@ -26,7 +26,7 @@ const ArticleFeed =()=>{
    },[]);
 
   return(
-    <div className="feed-article">
+    <div className="article-feed">
       {getNewArticle(state.new_articles)}
     </div>
   )

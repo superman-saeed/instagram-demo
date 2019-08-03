@@ -9,7 +9,7 @@ const unsplash = new Unsplash({
 
 
 export const fetchNewArticles=(state, dispatch)=>{
-  unsplash.photos.listPhotos(1, 5, "popular")
+  unsplash.photos.listPhotos(2, 5, "popular")
   .then((data)=>data.json())
   .then(json => {
     dispatch(action.addActicles(json));
@@ -20,7 +20,7 @@ export const fetchNewArticles=(state, dispatch)=>{
 
 }
 
-export const fetchExplore =(state, dispatch)=>{
+export const fetchExplore =()=>{
 
 }
 

@@ -1,4 +1,4 @@
-import React,{lazy, Suspense, useEffect } from "react";
+import React,{lazy, Suspense} from "react";
 import {BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../../redux/store";
@@ -7,6 +7,7 @@ import Navigation from "./Navigation";
 
 
 const Home = lazy(()=> import("../Landing"));
+const Explore = lazy(()=> import("../Explore"));
 
 
 const App =()=>{
@@ -18,6 +19,7 @@ const App =()=>{
           <Router>
             <Navigation />
             <Route exact path={route.HOME} component ={Home}/>
+            <Route exact path={route.EXPLORE} component ={Explore}/>
           </Router>
 
         </Suspense>
