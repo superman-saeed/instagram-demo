@@ -1,7 +1,12 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchNewArticles} from "../../../misc/utils.js";
 import Article from "./Article";
+import {fetchStatus} from "../../LayoutFlow";
+import {
+  fetchNewArticles,
+  fetchStories
+} from "../../../misc/utils.js";
+
 
 
 const getNewArticle =(newArticle)=>{
@@ -23,10 +28,12 @@ const ArticleFeed =()=>{
 
    useEffect(()=>{
      fetchNewArticles(state,dispatch);
+     fetchStories(state,dispatch);
    },[]);
 
   return(
     <div className="article-feed">
+      {fetchStatus(state)}
       {getNewArticle(state.new_articles)}
     </div>
   )

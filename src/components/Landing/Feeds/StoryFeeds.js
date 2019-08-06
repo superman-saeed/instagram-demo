@@ -1,7 +1,19 @@
 import React from "react";
 
 const StoryHeader=()=>(
-    <div className="footer">story header</div>
+    <div className="story-header">
+      <div>
+        <div className="user-image is48by48">
+          <img src="" alt="github" />
+        </div>
+      </div>
+      <div>
+       instagram-demo<br/>
+       <span>
+       <a href="https://github.com/superman-saeed/instagram-demo">fork me github</a>
+       </span>
+      </div>
+    </div>
 );
 
 const StoryBody=()=>(
@@ -11,7 +23,9 @@ const StoryBody=()=>(
 );
 
 const Storyfooter=()=>(
-    <div className="footer">app by Saeed</div>
+    <div className="footer">A demo by
+    <a href="https://superman-saeed.github.io"> Saeed</a>
+    </div>
 );
 
 const StoryLine = ()=>(

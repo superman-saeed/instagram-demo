@@ -6,7 +6,7 @@ const ArticleHeader =({username,img})=>(
   <header className="article-header">
 
      <div className="left-side">
-        <div className="article-header-image">
+        <div className="user-image is32by32">
         <img src={img} alt="profile" />
         </div>
         <div>
@@ -51,7 +51,7 @@ const ArticleFooter =({likes, desc,username})=>{
 
         </div>
         <div className="feed-likes"><strong>{_like}</strong></div>
-        <div style={{display:d}}>
+        <div  className="caption" style={{display:d}}>
         <a href="#user" aria-label="user-profile">
           <strong className="">{username}</strong>
         </a>

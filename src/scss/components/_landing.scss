@@ -1,6 +1,16 @@
-$feed-pad: 8px 12px;
+$feed-pad: 8px 18px;
 .home{
 
+}
+.user-image{
+  border-radius: 50%;
+  border: 0.7px solid #ccc;
+  margin-right: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+img{
+  object-fit: cover;
 }
 
 
@@ -68,17 +78,7 @@ $feed-pad: 8px 12px;
 
 
     }
-    .article-header-image{
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 0.7px solid #ccc;
-      margin-right: 10px;
-      overflow: hidden;
-    }
-    img{
-      object-fit: cover;
-    }
+
 
 }
 
@@ -86,6 +86,7 @@ $feed-pad: 8px 12px;
 
 .story-line{
   display: none;
+
 }
 .feed-body{
   img{
@@ -117,7 +118,11 @@ $feed-pad: 8px 12px;
 
 .feed-likes{
   margin-top: 5px;
-  font-size: small;
+  margin-bottom: 8px;
+}
+
+.feed-likes, .caption{
+  font-size: 16px;
 }
 
 @media (min-width:568px) and (max-width:667px) {
@@ -136,7 +141,10 @@ $feed-pad: 8px 12px;
 }
 
 @media (min-width:668px){
+ .story-header{
+   margin-bottom: 20px;
 
+ }
 .home-header-container{
   display: none;
 }
@@ -152,8 +160,8 @@ $feed-pad: 8px 12px;
 
 .story-line{
   display: initial;
-  flex:2;
-  margin-left: 10px;
+  flex:2.5;
+  margin-left: 30px;
 
   .story-container{
     position: sticky;
@@ -162,6 +170,8 @@ $feed-pad: 8px 12px;
   }
   .story-body{
     border: 1px solid #ccc;
+    height: 270px;
+    overflow-y: auto;
   }
 
   .footer{

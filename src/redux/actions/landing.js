@@ -14,7 +14,8 @@ export const addActicles =(articles)=>{
   return{
     type: actionType.FETCH_ARTICLES,
     payload:{
-      new_articles: articles
+      new_articles: articles,
+      articles_status:"sucessful"
     }
   }
 
@@ -29,4 +30,20 @@ export const comment =(comment)=>{
     }
   }
 
+}
+
+export const addStories=(data)=>{
+  return{
+    type: actionType.ADD_STORIES,
+    payload:{
+      stories:data
+    }
+  }
+
+}
+export const errorHandle=(name, value)=>{
+  return{
+    type: actionType.ERROR_FETCH,
+    error:name
+  }
 }
