@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Article from "./Article";
-import {fetchStatus} from "../../LayoutFlow";
+import {fetchStatus, getNewPosts} from "../../LayoutFlow";
 import {
   fetchNewArticles,
   fetchStories
@@ -33,8 +33,8 @@ const ArticleFeed =()=>{
 
   return(
     <div className="article-feed">
-      {fetchStatus(state)}
-      {getNewArticle(state.new_articles)}
+      {fetchStatus(state.error.articles_status)}
+      {getNewPosts(Article, state.new_articles)}
     </div>
   )
 };

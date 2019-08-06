@@ -1,8 +1,19 @@
 import React from "react";
-import loading_img from "../../img/progress.gif"
+import loading_img from "../../img/progress.gif";
 
-export const fetchStatus=({error})=>{
-  switch (error.articles_status) {
+export const getNewPosts =(Component, newPost)=>{
+
+  return (
+    newPost.map(
+      (json,key)=>(
+        <Component json={json} key={key} />
+      )
+    )
+  );
+}
+
+export const fetchStatus=(status)=>{
+  switch (status) {
     case "sucessful":
       return null;
     case "failed":

@@ -66,6 +66,10 @@ const newStories=(state,action)=>{
       ...state.add_stories,
        ...action.payload.stories
      ],
+     error:{
+       ...state.error,
+       stories:action.payload.stories_status
+     }
   }
 }
 const errorStatus=(state,name)=>{

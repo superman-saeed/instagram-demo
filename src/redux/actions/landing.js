@@ -36,7 +36,8 @@ export const addStories=(data)=>{
   return{
     type: actionType.ADD_STORIES,
     payload:{
-      stories:data
+      stories:data,
+      stories_status:"sucessful"
     }
   }
 
