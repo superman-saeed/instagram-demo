@@ -9,19 +9,10 @@ import {
 
 
 
-const getNewArticle =(newArticle)=>{
+/*
+Article component returns  a list of photo posts(article);
+*/
 
-  return (
-    newArticle.map(
-      (json,key)=>(
-        <Article json={json} key={key} />
-      )
-    )
-  );
-}
-
-
-// All photos articles
 const ArticleFeed =()=>{
     const dispatch = useDispatch(),
     state =useSelector(({landing})=>landing);

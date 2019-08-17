@@ -48,3 +48,14 @@ export const errorHandle=(name, value)=>{
     error:name
   }
 }
+
+
+export const addTest=()=>{
+  return{
+    type: actionType.SAGA_TEST,
+    payload:{
+      sample:"redux-saga"
+    }
+  }
+
+}

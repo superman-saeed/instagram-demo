@@ -9,9 +9,7 @@ $feed-pad: 8px 18px;
   overflow: hidden;
   display: inline-block;
 }
-img{
-  object-fit: cover;
-}
+
 
 
 .feed-article,
@@ -88,11 +86,12 @@ img{
   display: none;
 
 }
-.feed-body{
+.feed-body, .story-body{
   img{
     background-color: #ccc;
     width: 100%;
-    object-fit: contain;
+    height: inherit;
+    object-fit: cover;
   }
 }
 .feed-footer{
@@ -125,7 +124,7 @@ img{
   font-size: 16px;
 }
 
-@media (min-width:568px) and (max-width:667px) {
+@media (min-width:568px)  {
   .home-header-container{
     display: none;
   }
@@ -167,14 +166,17 @@ img{
     position: sticky;
     top: 90px;
 
+
   }
   .story-body{
     border: 1px solid #ccc;
     height: 270px;
     overflow-y: auto;
+    padding: 20px;
   }
 
   .footer{
+    margin-top:20px;
     color:grey;
     font-size: 18px;
   }

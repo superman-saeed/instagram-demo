@@ -2,6 +2,7 @@ body{
   margin: 0;
   font-size: 1.15em;
   font-family: arial, sans-serif, monospace;
+  background-color: #fafafa;
 }
 .center{
   margin: auto;
@@ -38,6 +39,7 @@ a:hover, a:active{
   width: 160px;
   overflow: hidden;;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
@@ -72,7 +74,7 @@ a:hover, a:active{
 @media (min-width:1028px){
   .container{
     margin: auto;
-    max-width: 920px;
+    max-width: 992px;
   }
 
 }

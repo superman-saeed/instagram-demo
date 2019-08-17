@@ -7,3 +7,4 @@ export const FETCH_EXPLORE= "fetch_explore";
 export const SEEN_EXPLORE_ARTICLE = "seen_explore_article";
 export const ADD_STORIES = "add_stories";
 export const ERROR_FETCH = "error_fetch";
+export const SAGA_TEST = "saga_test";
