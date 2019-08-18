@@ -10,16 +10,37 @@ export const likeArticle=(id,url)=>{
   }
 }
 
-export const addActicles =(articles)=>{
+export const fetchArticles=(num)=>{
   return{
     type: actionType.FETCH_ARTICLES,
+    payload:{
+      page: num,
+    }
+  }
+}
+
+export const fetchArticlesError= (num)=>{
+  return{
+    type: actionType.FETCH_ARTICLES_FAILED,
+    payload:{
+      page: num,
+    }
+  }
+}
+
+
+export const addActicles =(articles)=>{
+  return{
+    type: actionType.ADD_ARTICLES,
     payload:{
       new_articles: articles,
       articles_status:"sucessful"
     }
   }
-
 }
+
+
+
 
 export const comment =(comment)=>{
   return{
@@ -47,15 +68,4 @@ export const errorHandle=(name, value)=>{
     type: actionType.ERROR_FETCH,
     error:name
   }
-}
-
-
-export const addTest=()=>{
-  return{
-    type: actionType.SAGA_TEST,
-    payload:{
-      sample:"redux-saga"
-    }
-  }
-
 }

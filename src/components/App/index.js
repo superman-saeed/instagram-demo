@@ -1,9 +1,10 @@
 import React,{lazy, Suspense} from "react";
-import {BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../../redux/store";
 import * as route from "../../constants/routes";
 import Navigation from "./Navigation";
+import NotFound from "./NotFound";
 
 
 const Home = lazy(()=> import("../Landing"));
@@ -18,8 +19,11 @@ const App =()=>{
         <Suspense fallback={<div>This is fallback</div>}>
           <Router>
             <Navigation />
-            <Route exact path={route.HOME} component ={Home}/>
-            <Route exact path={route.EXPLORE} component ={Explore}/>
+              <Switch>
+                <Route exact path={route.HOME} component ={Home}/>
+                <Route path={route.EXPLORE} component ={Explore}/>
+                <Route component={NotFound} />
+              </Switch>
           </Router>
 
         </Suspense>

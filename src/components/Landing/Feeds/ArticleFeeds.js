@@ -2,12 +2,16 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Article from "./Article";
 import {fetchStatus, getNewPosts} from "../../LayoutFlow";
-import {
-  fetchNewArticles,
-  fetchStories
-} from "../../../misc/utils.js";
+import * as actions from "../../../redux/actions/landing";
 
-
+/* one time fetch when component first mount */
+const onMountFetch =(articles, dispatch)=>{
+  if(articles ===0){
+    dispatch(
+      actions.fetchArticles((articles + 1))
+    )
+  }
+}
 
 /*
 Article component returns  a list of photo posts(article);
@@ -18,9 +22,11 @@ const ArticleFeed =()=>{
     state =useSelector(({landing})=>landing);
 
    useEffect(()=>{
-     fetchNewArticles(state,dispatch);
-     fetchStories(state,dispatch);
-   },[]);
+     onMountFetch(
+       state.new_articles.length,
+       dispatch
+     )
+   },[]);//[] for not watching any variable
 
   return(
     <div className="article-feed">

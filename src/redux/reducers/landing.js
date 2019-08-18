@@ -20,7 +20,7 @@ const landing =(state=INITIALISE_STATE, action)=>{
 
   switch (action.type) {
 
-    case actionType.FETCH_ARTICLES:
+    case actionType.ADD_ARTICLES:
       return newArticles(state,action);
 
     case actionType.LIKE_ARTICLE:

@@ -24,7 +24,7 @@ const StoryItem=({json})=>(
     <div className="user-image is48by48">
       <img src={json.cover_photo.urls.thumb} alt="github" />
     </div>
-   <p class="truncate-text"  ><strong><a href="#lin" title={json.title}>{json.title}</a></strong></p>
+   <p className="truncate-text"  ><strong><a href="#lin">{json.title}</a></strong></p>
   </div>
 )
 

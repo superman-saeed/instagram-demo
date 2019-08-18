@@ -1,10 +1,8 @@
-import {put,  takeEvery } from "redux-saga/effects";
-
-function*  helloSaga(action){
-  console.log(action.payload.sample);
-  put({type:"simple dispatch", payload:{}});
-}
+import {all} from "redux-saga/effects";
+import landingSaga from "./landing";
 
 export function* mySaga() {
-  yield takeEvery("saga_test", helloSaga);
+  yield all(
+    [landingSaga()]
+  );
 }

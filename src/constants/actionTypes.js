@@ -1,4 +1,6 @@
 export const FETCH_ARTICLES = "fetch_articles";
+export const FETCH_ARTICLES_FAILED = "fetch_articles_failed";
+export const ADD_ARTICLES = "add_articles";
 export const SEEN_ARTICLE = "seen_article";
 export const LIKE_ARTICLE = "like_article";
 export const ADD_PROFILE = "add_profile";
@@ -7,4 +9,3 @@ export const FETCH_EXPLORE= "fetch_explore";
 export const SEEN_EXPLORE_ARTICLE = "seen_explore_article";
 export const ADD_STORIES = "add_stories";
 export const ERROR_FETCH = "error_fetch";
-export const SAGA_TEST = "saga_test";
