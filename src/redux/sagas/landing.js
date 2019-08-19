@@ -1,7 +1,12 @@
 import unsplash from "../../misc/utils";
-import {addActicles, articlesFetchFails} from "../actions/landing";
-import {FETCH_ARTICLES} from "../../constants/actionTypes";
+import {FETCH_ARTICLES, FETCH_STORIES } from "../../constants/actionTypes";
 import {put, takeLatest } from "redux-saga/effects";
+import {
+  addActicles,
+  articlesFailed,
+  addStories,
+  storiesFailed
+} from "../actions/landing";
 
 function* fetchNewArticles(action){
   const page = action.payload.page;
@@ -10,15 +15,34 @@ function* fetchNewArticles(action){
       page, 5, "popular")
     .then((data)=>data.json());
      yield put(addActicles(json));
-     console.log(json);
+  } catch(e) {
+    console.log(e);
+  }
+
+}
+function* fetchStories(action){
+  const page = action.payload.page;
+  try {
+    const json =
+    yield unsplash.collections.listCollections(page, 8, "popular")
+        .then(data=>data.json());
+      yield put(addStories(json));
   } catch(e) {
     console.log(e);
   }
 
 }
 
-function* watchArticleFetch() {
+
+function* watch_articles() {
   yield takeLatest(FETCH_ARTICLES, fetchNewArticles);
 }
 
-export default watchArticleFetch;
+
+
+function* watch_stories() {
+  yield takeLatest(FETCH_STORIES, fetchStories);
+}
+
+export const watchArticles = watch_articles;
+export const watchStories = watch_stories;

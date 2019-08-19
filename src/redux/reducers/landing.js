@@ -7,7 +7,7 @@ const INITIALISE_STATE={
   seen_articles:[],
   add_stories :[],
   error:{
-    articles_status:null,
+    articles:null,
     liked_articles: null,
     recent_profiles:null,
     stories:null
@@ -35,9 +35,6 @@ const landing =(state=INITIALISE_STATE, action)=>{
     case actionType.ADD_STORIES:
       return newStories(state,action);
 
-    case actionType.ERROR_FETCH:
-      const name = action.error;
-      return errorStatus(state,name);
     default:
       return state;
 
@@ -55,10 +52,31 @@ const newArticles=(state, action)=>{
      ],
      error:{
        ...state.error,
-       articles_status:action.payload.articles_status
+       articles:action.payload.articles_status
      }
   };
 }
+
+const articlesFailed =(state, action)=>{
+  return {
+    ...state,
+    error:{
+      ...state.error,
+      articles:action.payload.articles_status
+    }
+  }
+}
+
+const storiesFailed =(state, action)=>{
+  return {
+    ...state,
+    error:{
+      ...state.error,
+      stories:action.payload.stories_status
+    }
+  }
+}
+
 const newStories=(state,action)=>{
   return {
     ...state,
@@ -72,13 +90,6 @@ const newStories=(state,action)=>{
      }
   }
 }
-const errorStatus=(state,name)=>{
-  return {
-    ...state,
-    error:{
-      ...state.error,
-       [name]:"failed"
-     }
-  };
-}
+
+
 export default landing;

@@ -6,10 +6,15 @@ import * as actions from "../../../redux/actions/landing";
 
 /* one time fetch when component first mount */
 const onMountFetch =(articles, dispatch)=>{
+  const page = Math.floor((Math.random() * 9)+1)
+
   if(articles ===0){
     dispatch(
-      actions.fetchArticles((articles + 1))
-    )
+      actions.fetchArticles(page) // (articles + 1)
+    );
+    dispatch(
+      actions.fetchStories(page)
+    );
   }
 }
 
@@ -30,7 +35,7 @@ const ArticleFeed =()=>{
 
   return(
     <div className="article-feed">
-      {fetchStatus(state.error.articles_status)}
+      {fetchStatus(state.error.articles)}
       {getNewPosts(Article, state.new_articles)}
     </div>
   )

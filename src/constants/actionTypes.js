@@ -8,4 +8,6 @@ export const ADD_COMMENT = "add_comment";
 export const FETCH_EXPLORE= "fetch_explore";
 export const SEEN_EXPLORE_ARTICLE = "seen_explore_article";
 export const ADD_STORIES = "add_stories";
+export const FETCH_STORIES = "fetch_stories";
+export const STORIES_FAILED = "stories_failed";
 export const ERROR_FETCH = "error_fetch";

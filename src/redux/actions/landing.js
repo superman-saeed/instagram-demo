@@ -19,11 +19,20 @@ export const fetchArticles=(num)=>{
   }
 }
 
-export const fetchArticlesError= (num)=>{
+export const fetchStories=(num)=>{
+  return{
+    type: actionType.FETCH_STORIES,
+    payload:{
+      page: num,
+    }
+  }
+}
+
+export const articlesFailed= (num)=>{
   return{
     type: actionType.FETCH_ARTICLES_FAILED,
     payload:{
-      page: num,
+      articles_status:"failed"
     }
   }
 }
@@ -53,6 +62,8 @@ export const comment =(comment)=>{
 
 }
 
+
+
 export const addStories=(data)=>{
   return{
     type: actionType.ADD_STORIES,
@@ -63,9 +74,13 @@ export const addStories=(data)=>{
   }
 
 }
-export const errorHandle=(name, value)=>{
-  return{
-    type: actionType.ERROR_FETCH,
-    error:name
+
+export const storiesFailed=(num)=>{
+  return {
+    type: actionType.STORIES_FAILED,
+    payload:{
+      stories:"failed",
+
+    }
   }
 }
