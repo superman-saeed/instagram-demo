@@ -2,7 +2,7 @@ import React from "react";
 
 
 //Acticle for single photo post
-const ArticleHeader =({username,img})=>(
+const Header =({username,img,option})=>(
   <header className="article-header">
 
      <div className="left-side">
@@ -17,20 +17,20 @@ const ArticleHeader =({username,img})=>(
     </div>
 
     <div className="right-side">
-      <a href="#option" aria-label="option">
+      <a href="#option" aria-label="option" onClick={(e)=>option(e)}>
         <div className="threedots-icon is24by24"></div>
       </a>
     </div>
   </header>
 );
 
-const ArticleBody=({img,desc})=>(
+const Body=({img,desc,dbClick})=>(
   <div className="feed-body">
-    <div><img src={img} alt={desc} /></div>
+    <div><img onDoubleClick={(e)=> dbClick(e)} src={img} alt={desc} /></div>
   </div>
 );
 
-const ArticleFooter =({likes, desc,username})=>{
+const Footer =({likes, desc,username})=>{
     let _like = likes > 1 ?
     likes + " likes"
     :likes+ " like",
@@ -62,25 +62,38 @@ const ArticleFooter =({likes, desc,username})=>{
 }
 
 
-const Article =({json})=>(
+const Article =({json})=>{
+
+  const option =(event)=>{
+    event.preventDefault();
+    console.log("option was click");
+  }
+  const likeD =(event)=>{
+    event.preventDefault();
+    console.log(" was double click");
+  }
+
+  return(
 
     <article className="feed white-theme">
 
-      <ArticleHeader
+      <Header
       username={json.user.username}
-      img={json.user.profile_image.small} />
+      img={json.user.profile_image.small}
+      option={option}/>
 
-      <ArticleBody
+      <Body
       img={json.urls.small}
-      desc={json.description}/>
+      desc={json.description}
+      dbClick={likeD} />
 
-      <ArticleFooter
+      <Footer
        likes={json.likes}
        username={json.user.username}
        desc={json.description} />
 
     </article>
   );
-
+}
 
 export default Article;

@@ -4,7 +4,7 @@ const INITIALISE_STATE={
   explore_articles :[],
   viewed_articles :[],
   error:{
-    explore_articles:null,
+    articles:null,
   }
 }
 
@@ -16,7 +16,7 @@ const explore =(state=INITIALISE_STATE, action)=>{
 
   switch (action.type) {
 
-    case actionType.FETCH_EXPLORE:
+    case actionType.ADD_EXPLORES:
       return {
         state,
         explore_articles:[

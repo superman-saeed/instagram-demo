@@ -1,0 +1,36 @@
+.photo-grid{
+  display: flex;
+  flex-flow: row wrap;
+  margin: -1px;
+}
+
+.photo-quadrant{
+  position: relative;
+  flex-basis: calc(33.333% - 2px);
+  box-sizing: border-box;
+  margin: 1px;
+  background-color: #ccc;
+
+}
+
+.photo-quadrant::before{
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
+.photo-cover{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width:600px) {
+  .photo-grid{
+    margin:-10px; 
+  }
+  .photo-quadrant{
+    flex-basis: calc(33.333% - 20px);
+    margin: 10px;
+  }
+}

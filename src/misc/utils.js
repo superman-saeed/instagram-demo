@@ -1,4 +1,3 @@
-import action from "../redux/actions";
 import Unsplash from "unsplash-js";
 
 const unsplash = new Unsplash({

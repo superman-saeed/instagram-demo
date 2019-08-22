@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Article from "./Article";
 import {fetchStatus, getNewPosts} from "../../LayoutFlow";
-import * as actions from "../../../redux/actions/landing";
+import  actions from "../../../redux/actions/index";
 
 /* one time fetch when component first mount */
 const onMountFetch =(articles, dispatch)=>{
