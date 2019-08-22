@@ -9,7 +9,8 @@
   flex-basis: calc(33.333% - 2px);
   box-sizing: border-box;
   margin: 1px;
-  background-color: #ccc;
+  border: 1px solid #ccc;
+  background-color: #fff;
 
 }
 
@@ -23,11 +24,21 @@
   top: 0; left: 0;
   height: 100%;
   width: 100%;
+
+  a{
+    display: block;
+    height: 100%;
+  }
+  img{
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media (min-width:600px) {
   .photo-grid{
-    margin:-10px; 
+    margin:-10px;
   }
   .photo-quadrant{
     flex-basis: calc(33.333% - 20px);

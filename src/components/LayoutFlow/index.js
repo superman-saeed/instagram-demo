@@ -16,19 +16,25 @@ export const fetchStatus=(status)=>{
   switch (status) {
     case "sucessful":
       return null;
+    case "pending":
+
+      return <Progress />;
     case "failed":
         return <div>click to refresh</div>;
     default:
-        return (
-          <div>
-          <img
-          style={{
-            width:64,
-            margin:"auto",
-            display:"block"
-          }}
-
-          src={loading_img} alt="loading..."/>
-        </div>);
+        return <Progress />
   }
 }
+
+export const Progress =()=>(
+  <div>
+  <img
+  style={{
+    width:64,
+    margin:"auto",
+    display:"block"
+  }}
+
+  src={loading_img} alt="loading..."/>
+</div>
+)

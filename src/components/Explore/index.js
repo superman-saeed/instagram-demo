@@ -1,8 +1,18 @@
 import React,{ useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import  actions from "../../redux/actions/index";
+import {getNewPosts, fetchStatus } from "../LayoutFlow";
 
 
+const SquarePhoto =({json})=>(
+  <div className="photo-quadrant">
+   <div className="photo-cover">
+    <a href="#photo">
+      <img src={json.urls.thumb} alt="image" />
+    </a>
+   </div>
+ </div>
+)
 
 const Header =()=>(
   <div>
@@ -10,36 +20,26 @@ const Header =()=>(
   </div>
 )
 
-const Body =()=>(
+const Body =({photosDetails,status})=>(
+  <>
   <div className="photo-grid">
-      <div className="photo-quadrant">
-       <div className="photo-cover">
-
-       </div>
-     </div>
-     <div className="photo-quadrant">
-      <div className="photo-cover">
-
-      </div>
-    </div>
-    <div className="photo-quadrant">
-     <div className="photo-cover">
-
-     </div>
-   </div>
+    {getNewPosts(SquarePhoto, photosDetails)}
   </div>
+    {fetchStatus(status)}
+  </>
 )
 
 const Footer =()=>(
   <div>
-   footer 2018
+   footer 2019
   </div>
 )
 
 
 
 const Explore = ()=>{
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(),
+  state =useSelector(({explore})=>explore);
 
   useEffect(()=>{
     dispatch(actions.fetchExplore())
@@ -47,7 +47,9 @@ const Explore = ()=>{
   return(
     <div className="app-body container">
        <Header />
-       <Body />
+       <Body
+       photosDetails={state.explore_articles}
+       status={state.error.explores}/>
        <Footer />
     </div>
   )

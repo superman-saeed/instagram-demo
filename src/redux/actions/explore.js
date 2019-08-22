@@ -10,7 +10,7 @@ export const fetchExplore=(collection)=>{
 }
 
 
-export const addActicles =(explore)=>{
+export const addExplores =(explore)=>{
   return{
     type: actionType.ADD_EXPLORES,
     payload:{

@@ -4,26 +4,17 @@ const INITIALISE_STATE={
   explore_articles :[],
   viewed_articles :[],
   error:{
-    articles:null,
+    explores:null,
   }
 }
 
 const explore =(state=INITIALISE_STATE, action)=>{
-  let {
-    explore_articles,
-    error
-  } = state;
+
 
   switch (action.type) {
 
     case actionType.ADD_EXPLORES:
-      return {
-        state,
-        explore_articles:[
-          ...explore_articles,
-          "added explore article"
-        ]
-      };
+      return addExplores(state,action);
 
     case actionType.LIKE_ARTICLE:
       return state;
@@ -37,4 +28,17 @@ const explore =(state=INITIALISE_STATE, action)=>{
   }
 
 };
+const addExplores=(state,action)=>{
+
+  return {
+    ...state,
+    explore_articles:[
+      ...state.explore_articles,
+      ...action.payload.explore
+    ],
+    error:{
+      explores:"sucessful"
+    }
+  };
+}
 export default explore;
