@@ -40,7 +40,7 @@ const MobiNav=()=>(
       <div>
         <Link to={ ACTIVITY }>
         <div className="navi-item">
-          <div className="activity-icon-outl is24by24 center"></div>
+          <div className="heart-icon-outl is24by24 center"></div>
         </div>
         </Link>
       </div>

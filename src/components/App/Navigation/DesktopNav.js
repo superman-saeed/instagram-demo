@@ -30,7 +30,7 @@ const  DesktopNav =()=>(
           </div>
 
           <div>
-            <div className="activity-icon-outl is24by24"></div>
+            <div className="heart-icon-outl is24by24"></div>
           </div>
           <div>
             <div className="user-icon-outl is24by24"></div>

@@ -71,10 +71,14 @@
   @include sprite-img(-125px, -269px);
 }
 
-.activity-icon-outl{
+.redheart-icon{
+    @include sprite-img(-300px, -268px);
+}
+
+.heart-icon-outl{
   @include sprite-img(0, -295px);
 }
-.activity-icon-solid{
+.heart-icon-solid{
   @include sprite-img(-275px, -268px);
 }
 
