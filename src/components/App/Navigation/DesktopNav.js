@@ -2,9 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {
   HOME,
-  EXPLORE,
-  ACTIVITY,
-  USER} from "../../../constants/routes.js"
+  EXPLORE
+} from "../../../constants/routes.js"
 
 
 const  DesktopNav =()=>(
@@ -14,6 +13,7 @@ const  DesktopNav =()=>(
 
         <div className="item1">
         <div className="brand-logo is24by24"></div>
+        <div className="divider"></div>
           <Link to={ HOME }>
             <div className="instagram-logo absolute"></div>
           </Link>

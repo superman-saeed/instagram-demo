@@ -29,6 +29,9 @@ $feed-pad: 8px 18px;
 .article-feed{
   flex :1;
   flex-direction: column;
+  a{
+    outline: none;
+  }
 }
 
 .feed{
@@ -92,6 +95,12 @@ $feed-pad: 8px 18px;
     height: inherit;
     object-fit: cover;
   }
+}
+.feed-body{
+  img{
+    object-fit: scale-down;
+  }
+
 }
 .feed-footer{
   padding: $feed-pad;

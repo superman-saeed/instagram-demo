@@ -23,6 +23,9 @@ const landing =(state=INITIALISE_STATE, action)=>{
     case actionType.ADD_ARTICLES:
       return newArticles(state,action);
 
+    case actionType.FETCH_ARTICLES_FAILED:
+      return articlesFailed(state,action);
+
     case actionType.LIKE_ARTICLE:
       return state;
 
@@ -35,6 +38,8 @@ const landing =(state=INITIALISE_STATE, action)=>{
     case actionType.ADD_STORIES:
       return newStories(state,action);
 
+    case actionType.STORIES_FAILED:
+        return storiesFailed(state,action);
     default:
       return state;
 
@@ -72,7 +77,7 @@ const storiesFailed =(state, action)=>{
     ...state,
     error:{
       ...state.error,
-      stories:action.payload.stories_status
+      stories:action.payload.stories
     }
   }
 }

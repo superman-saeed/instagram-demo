@@ -10,7 +10,7 @@ import {
 function* fetchExplore(action){
   const page = action.payload.page;
   try {
-    const json=  yield unsplash.collections.getCollectionPhotos(3053437, 1, 9, "popular")
+    const json=  yield unsplash.collections.getCollectionPhotos(3053437, page, 9, "popular")
     .then(data=>data.json());
     console.log(json);
      yield put(addExplores(json));

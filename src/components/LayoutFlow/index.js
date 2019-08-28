@@ -12,7 +12,7 @@ export const getNewPosts =(Component, newPost)=>{
   );
 }
 
-export const fetchStatus=(status)=>{
+export const fetchStatus=(status, cb)=>{
   switch (status) {
     case "sucessful":
       return null;
@@ -20,7 +20,7 @@ export const fetchStatus=(status)=>{
 
       return <Progress />;
     case "failed":
-        return <div>click to refresh</div>;
+        return <div onClick={()=>cb()}>click to refresh</div>;
     default:
         return <Progress />
   }

@@ -8,7 +8,7 @@ const SquarePhoto =({json})=>(
   <div className="photo-quadrant">
    <div className="photo-cover">
     <a href="#photo">
-      <img src={json.urls.thumb} alt="image" />
+      <img src={json.urls.thumb} alt="kids" />
     </a>
    </div>
  </div>
@@ -43,6 +43,7 @@ const Explore = ()=>{
 
   useEffect(()=>{
     dispatch(actions.fetchExplore())
+    dispatch({type:"explore_navi"});// logo selector
   },[]); //[] not watch any viaribles
   return(
     <div className="app-body container">

@@ -12,3 +12,9 @@ export const ADD_STORIES = "add_stories";
 export const FETCH_STORIES = "fetch_stories";
 export const STORIES_FAILED = "stories_failed";
 export const ERROR_FETCH = "error_fetch";
+
+//mobi nav
+export const HOME_NAVI = "home_navi";
+export const EXPLORE_NAVI = "explore_navi";
+export const ACTIVITY_NAVI = "activity_navi";
+export const USER_ACC= "user_acc";

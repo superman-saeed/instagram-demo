@@ -1,10 +1,8 @@
 import React from "react";
-import {useDispatch} from "react-redux";
-
 
 
 const Navigation =()=>{
-  const dispatch = useDispatch();
+
 
   return(
   <div className="home-header-container white-theme">

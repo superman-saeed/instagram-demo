@@ -28,11 +28,11 @@ export const fetchStories=(num)=>{
   }
 }
 
-export const articlesFailed= (num)=>{
+export const articlesStatus= (data)=>{
   return{
     type: actionType.FETCH_ARTICLES_FAILED,
     payload:{
-      articles_status:"failed"
+      articles_status:data
     }
   }
 }
@@ -75,11 +75,11 @@ export const addStories=(data)=>{
 
 }
 
-export const storiesFailed=(num)=>{
+export const storiesStatus=(data)=>{
   return {
     type: actionType.STORIES_FAILED,
     payload:{
-      stories:"failed",
+      stories:data,
 
     }
   }

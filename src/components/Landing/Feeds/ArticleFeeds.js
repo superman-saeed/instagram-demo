@@ -4,9 +4,11 @@ import Article from "./Article";
 import {fetchStatus, getNewPosts} from "../../LayoutFlow";
 import  actions from "../../../redux/actions/index";
 
+const page = Math.floor((Math.random() * 9)+1);
 /* one time fetch when component first mount */
 const onMountFetch =(articles, dispatch)=>{
-  const page = Math.floor((Math.random() * 9)+1)
+
+  dispatch({type:"home_navi"});// logo selector
 
   if(articles ===0){
     dispatch(
@@ -26,6 +28,12 @@ const ArticleFeed =()=>{
     const dispatch = useDispatch(),
     state =useSelector(({landing})=>landing);
 
+    const fetchCB=()=>{
+      dispatch(
+        actions.fetchArticles(page) // (articles + 1)
+      );
+    }
+
    useEffect(()=>{
      onMountFetch(
        state.new_articles.length,
@@ -35,7 +43,7 @@ const ArticleFeed =()=>{
 
   return(
     <div className="article-feed">
-      {fetchStatus(state.error.articles)}
+      {fetchStatus(state.error.articles, fetchCB )}
       {getNewPosts(Article, state.new_articles)}
     </div>
   )

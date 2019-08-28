@@ -4,11 +4,12 @@ import { Provider } from "react-redux";
 import store from "../../redux/store";
 import * as route from "../../constants/routes";
 import Navigation from "./Navigation";
+import Explore from "../Explore";
 import NotFound from "./NotFound";
 
 
 const Home = lazy(()=> import("../Landing"));
-const Explore = lazy(()=> import("../Explore"));
+
 
 
 const App =()=>{

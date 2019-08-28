@@ -1,7 +1,10 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 import {fetchStatus, getNewPosts} from "../../LayoutFlow";
+import  actions from "../../../redux/actions/index";
 import git_img from "../../../img/github.png";
+
+const page = Math.floor((Math.random() * 9)+1);
 
 const StoryHeader=()=>(
     <div className="story-header">
@@ -30,11 +33,18 @@ const StoryItem=({json})=>(
 
 
 const StoryBody=()=>{
-  const state =useSelector(({landing})=>landing);
+  const state =useSelector(({landing})=>landing),
+  dispatch = useDispatch();
+
+  const fetchCB=()=>{
+    dispatch(
+      actions.fetchStories(page)
+    );
+  }
   return(
     <div className="story-body">
     <div><strong> Stories</strong></div>
-      {fetchStatus(state.error.stories)}
+      {fetchStatus(state.error.stories, fetchCB)}
       {getNewPosts(StoryItem, state.add_stories)}
     </div>
   );
