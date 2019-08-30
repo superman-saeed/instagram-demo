@@ -2,20 +2,20 @@ import unsplash from "../../misc/utils";
 import {FETCH_EXPLORES } from "../../constants/actionTypes";
 import {put, takeLatest } from "redux-saga/effects";
 import {
-  addExplores
-
+  addExplores,
+  exploresStatus
 } from "../actions/explore";
 
 
 function* fetchExplore(action){
   const page = action.payload.page;
+  yield put(exploresStatus("pending"));
   try {
-    const json=  yield unsplash.collections.getCollectionPhotos(3053437, page, 9, "popular")
+    const json=  yield unsplash.collections.getCollectionPhotos(3053437, page, 6, "popular")
     .then(data=>data.json());
-    console.log(json);
      yield put(addExplores(json));
   } catch(e) {
-    console.log(e);
+     yield put(exploresStatus("failed"));
   }
 
 }

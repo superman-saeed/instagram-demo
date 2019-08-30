@@ -7,6 +7,7 @@ export const ADD_PROFILE = "add_profile";
 export const ADD_COMMENT = "add_comment";
 export const FETCH_EXPLORES= "fetch_explore";
 export const ADD_EXPLORES= "add_explore";
+export const EXPLORES_STATUS="explores_status";
 export const SEEN_EXPLORE_ARTICLE = "seen_explore_article";
 export const ADD_STORIES = "add_stories";
 export const FETCH_STORIES = "fetch_stories";

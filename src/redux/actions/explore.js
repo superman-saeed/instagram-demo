@@ -1,10 +1,10 @@
 import * as actionType from "../../constants/actionTypes";
 
-export const fetchExplore=(collection)=>{
+export const fetchExplore=(page)=>{
   return{
     type: actionType.FETCH_EXPLORES,
     payload:{
-      collection: collection,
+      page: page,
     }
   }
 }
@@ -16,6 +16,15 @@ export const addExplores =(explore)=>{
     payload:{
       explore: explore,
       explore_status:"sucessful"
+    }
+  }
+}
+
+export const exploresStatus=(info)=>{
+  return {
+    type:actionType.EXPLORES_STATUS,
+    payload:{
+      explores_status:info
     }
   }
 }

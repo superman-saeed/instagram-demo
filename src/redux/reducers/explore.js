@@ -16,6 +16,9 @@ const explore =(state=INITIALISE_STATE, action)=>{
     case actionType.ADD_EXPLORES:
       return addExplores(state,action);
 
+    case actionType.EXPLORES_STATUS:
+      return exploresFailed(state, action);
+
     case actionType.LIKE_ARTICLE:
       return state;
 
@@ -41,4 +44,15 @@ const addExplores=(state,action)=>{
     }
   };
 }
+
+const exploresFailed=(state, action)=>{
+  return {
+    ...state,
+    error:{
+      ...state.error,
+      explores:action.payload.explores_status
+    }
+  }
+}
+
 export default explore;

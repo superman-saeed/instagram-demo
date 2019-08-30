@@ -5,7 +5,7 @@ const Navigation =()=>{
 
 
   return(
-  <div className="home-header-container white-theme">
+  <div className="home-header-container white-theme header">
     <div className="home-header">
       <div className="left-side"><a href="#camera"><div className="camera-icon-outl is24by24"></div></a></div>
       <div className="center-side"><a href="#logo"><div className="instagram-logo"></div></a></div>
