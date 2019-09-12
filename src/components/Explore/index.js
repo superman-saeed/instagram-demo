@@ -2,7 +2,7 @@ import React,{ useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import  actions from "../../redux/actions/index";
 import Header from "./Header"
-import {getNewPosts, fetchStatus } from "../LayoutFlow";
+import {getNewPosts, fetchStatus } from "../LayoutExtras";
 
 
 const SquarePhoto =({json})=>(

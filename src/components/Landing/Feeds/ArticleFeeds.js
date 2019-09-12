@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Article from "./Article";
-import {fetchStatus, getNewPosts} from "../../LayoutFlow";
+import {fetchStatus, getNewPosts} from "../../LayoutExtras";
 import  actions from "../../../redux/actions/index";
 
 const page = Math.floor((Math.random() * 9)+1);

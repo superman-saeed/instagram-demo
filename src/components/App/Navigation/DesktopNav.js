@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import SearchBox from "../../LayoutExtras/SearchBox";
 import {
   HOME,
   EXPLORE
@@ -21,6 +22,7 @@ const  DesktopNav =()=>(
 
 
         <div className="item2">
+          <SearchBox />
         </div>
         <div className="item3">
           <div>

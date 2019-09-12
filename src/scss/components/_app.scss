@@ -31,6 +31,23 @@
 .nav-mobi-container, .header{
   z-index: 5;
 }
+.search-box{
+  border: 1px solid #ddd;
+  display: inline-block;
+  width: 150px;
+  margin: auto;
+
+}
+.search-botton{
+  display: block;
+  padding: 1px 5px;
+  text-align: center;
+
+  color: #ddd;
+  background: #fafafa;
+  font-size: 15px;
+}
+
 
 
 @media (min-width:568px){
@@ -50,7 +67,7 @@
     display: flex;
 
     .item1{
-      flex:2.5;
+      flex:4;
       position: relative;
 
     }
